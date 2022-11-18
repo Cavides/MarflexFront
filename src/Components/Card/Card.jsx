@@ -13,7 +13,7 @@ function Card(props) {
   const { product } = props;
 
   const handleClick = () => {
-    navigate(`ProductDetail/${product.id}`, { replace: true });
+    navigate(`ProductDetail/${product._id}`, { replace: true });
   };
 
   const handleAddToCart = (product) => {
