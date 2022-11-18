@@ -11,7 +11,7 @@ function AdminNavBar() {
       <div className="header_Admin">
         <div className="container_Admin">
           <div className="btn-menu_Admin">
-            <label for="btn-menu_Admin">☰</label>
+            <label htmlFor="btn-menu_Admin">☰</label>
           </div>
           <div className="logo_Admin">
             <h1>
