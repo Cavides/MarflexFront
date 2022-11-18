@@ -9,8 +9,7 @@ import "./styles/admonCatalogo.css";
 import {getAllProducts} from "../../Services/Products_services";
 import Card from '../../Components/CardAdmin/Card';
 
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
+
 
 function CatalogoAdmin() {
 

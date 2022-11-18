@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 
 import "./styles/productDetail.css";
 
@@ -12,12 +12,11 @@ function Detail() {
   const [product, setProduct] = useState({});
   const { _id } = useParams();
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await getProduct(_id);
+      const result = await getProduct(id);
       setProduct(result);
     };
     fetchData();

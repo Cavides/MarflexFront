@@ -70,7 +70,7 @@ function Register() {
   return (
     <div className="main-container">
       <div className="regoMarflex">
-      <Link className= 'navBar__navLink' to='/'><img src={logo} /></Link>
+      <Link className= 'navBar__navLink' to='/'><img src={logo} alt="Logo de la empresa Marflex"/></Link>
       </div>
       <div className="reg-form">
         {/* title */}

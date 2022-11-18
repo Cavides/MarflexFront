@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
-import { NavLink, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
 import { setProfile } from '../../../Store/profileSlice';
@@ -61,7 +61,7 @@ const handlerChange = (event) => {
       <br />
       <br />
       <div className="logoMarflex">
-      <Link className= 'navBar__navLink' to='/'><img src={logo} /></Link>
+      <Link className= 'navBar__navLink' to='/'><img src={logo} alt="Logo de la empresa Marflex"/></Link>
       </div>
       <div className="log-form">
         {/* title */}
