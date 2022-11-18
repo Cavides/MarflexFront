@@ -15,7 +15,7 @@ function AdminNavBar() {
           </div>
           <div className="logo_Admin">
             <h1>
-              <img src={logo} />
+              <img src={logo} alt="logo de la empresa Marflex"/>
             </h1>
           </div>
         </div>

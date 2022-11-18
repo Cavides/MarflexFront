@@ -26,7 +26,7 @@ function Card(props) {
     <div className="card">
       <h3 className="card__title">{product.title}</h3>
       <div className="card__containerImg">
-        <img src={product.imagen} className="card__image" />
+        <img src={product.imagen} className="card__image" alt="Imagen del producto"/>
       </div>
       <h3 className="card__title">{product.desc}</h3>
       <h3 className="card__title">${product.price}</h3>
