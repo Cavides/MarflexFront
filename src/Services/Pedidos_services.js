@@ -1,9 +1,9 @@
-const URL = "http://localhost:5000/pedidos";
+const URL = "https://marflexback-production.up.railway.app";
 
 const createPedido= async(pedido) =>{
     const options = {
         method: 'POST',
-        body: JSON.stringify(user),
+        body: JSON.stringify(pedido),
         headers: {
             'Content-Type': 'application/json',
         }
@@ -13,17 +13,17 @@ const createPedido= async(pedido) =>{
 }
 
 const getAllPedidos = async () =>{
-    const response = await fetch(`${URL}`);
+    const response = await fetch(`${URL}/pedidos`);
     return await response.json();
   }
 const getPedido = async (id) =>{
-    const response = await fetch(`${URL}/${id}`);
+    const response = await fetch(`${URL}/pedidos/${id}`);
     return await response.json();
   }
 
   const updatePedido = async(pedidoUpdate) => {
     // const token = localStorage.getItem('token');
-    const response = await fetch(`${URL}`, {
+    const response = await fetch(`${URL}/pedidos`, {
       method: 'PATCH',
       body: JSON.stringify(pedidoUpdate),
       headers: {
@@ -36,7 +36,7 @@ const getPedido = async (id) =>{
 
   const deletePedido = async () => {
     // const token = localStorage.getItem('token');
-    const response = await fetch(`${URL}`, {
+    const response = await fetch(`${URL}/pedidos`, {
       method: 'DELETE',
       headers: {
         // authorization: `Bearer ${token}`,

@@ -1,4 +1,4 @@
-const URL = "http://localhost:5000/productos";
+const URL = "https://marflexback-production.up.railway.app"
 
 const createProduct= async(product) =>{
     const options = {
@@ -8,22 +8,22 @@ const createProduct= async(product) =>{
             'Content-Type': 'application/json',
         }
 };
-    const newProduct = await fetch(URL,options);
+    const newProduct = await fetch('{URL}/productos',options);
     return newProduct.json();
 }
 
 const getAllProducts = async () =>{
-    const response = await fetch(`${URL}`);
+    const response = await fetch(`${URL}/productos`);
     return await response.json();
   }
 const getProduct = async (id) =>{
-    const response = await fetch(`${URL}/${id}`);
+    const response = await fetch(`${URL}/productos/${id}`);
     return await response.json();
   }
 
   const updateProduct = async(productUpdate) => {
     // const token = localStorage.getItem('token');
-    const response = await fetch(`${URL}`, {
+    const response = await fetch(`${URL}/productos`, {
       method: 'PATCH',
       body: JSON.stringify(productUpdate),
       headers: {
@@ -36,7 +36,7 @@ const getProduct = async (id) =>{
 
   const deleteProduct = async () => {
     // const token = localStorage.getItem('token');
-    const response = await fetch(`${URL}`, {
+    const response = await fetch(`${URL}/productos`, {
       method: 'DELETE',
       headers: {
         // authorization: `Bearer ${token}`,

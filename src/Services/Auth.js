@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL ="https://marflexback-production.up.railway.app"
+;
 
 export async function login(email, password) {
   const response = await fetch(`${BASE_URL}/auth/local/login`, {

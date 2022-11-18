@@ -1,20 +1,20 @@
-import axios from "axios";
 
-const URL = "http://localhost:5000/users";
+
+const URL = "https://marflexback-production.up.railway.app";
 
 export async function getUsers() {
-    const response = await fetch(`${URL}`);
+    const response = await fetch(`${URL}/users`);
     return response.json();
   }
   
   export async function getUserByEmail(email) {
-    const response = await fetch(`${URL}/email/${email}`, {});
+    const response = await fetch(`${URL}/users/email/${email}`, {});
     return response.json();
   }
   
   
   export async function createUser(user) {
-    const response = await fetch(`${URL}`, {
+    const response = await fetch(`${URL}/users`, {
       method: 'POST',
       body: JSON.stringify(user),
       headers: {
@@ -26,7 +26,7 @@ export async function getUsers() {
   
   export async function updateUser(userUpdate) {
     const token = localStorage.getItem('token');
-    const response = await fetch(`${URL}`, {
+    const response = await fetch(`${URL}/users`, {
       method: 'PATCH',
       body: JSON.stringify(userUpdate),
       headers: {
@@ -39,7 +39,7 @@ export async function getUsers() {
   
   export async function deleteUser() {
     const token = localStorage.getItem('token');
-    const response = await fetch(`${URL}`, {
+    const response = await fetch(`${URL}/users`, {
       method: 'DELETE',
       headers: {
         authorization: `Bearer ${token}`,

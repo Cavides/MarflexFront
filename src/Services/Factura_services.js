@@ -1,6 +1,6 @@
-import axios from "axios";
 
-const URL = "http://localhost:5000/facturas";
+
+const URL = "https://marflexback-production.up.railway.app";
 
 const createFactura= async(factura) =>{
     const options = {
@@ -15,11 +15,11 @@ const createFactura= async(factura) =>{
 }
 
 const getAllFacturas = async () =>{
-    const response = await fetch(`${URL}`);
+    const response = await fetch(`${URL}/facturas`);
     return await response.json();
   }
 const getFactura = async (id) =>{
-    const response = await fetch(`${URL}/${id}`);
+    const response = await fetch(`${URL}/facturas/${id}`);
     return await response.json();
   }
 
