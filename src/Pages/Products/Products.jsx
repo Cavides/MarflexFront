@@ -9,9 +9,6 @@ import "./products.css";
 import {getAllProducts} from "../../Services/Products_services";
 import Card from '../../Components/Card/Card';
 
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
-import { addToCart } from "../../slices/cartSlice";
 
 // import { useGetAllProductsQuery } from "../../slices/productsApi";
 
