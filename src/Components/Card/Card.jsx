@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../slices/cartSlice";
 
 import "./card.css";
@@ -10,13 +10,11 @@ import "./card.css";
 function Card(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [bool,setBool] = useState(true);
+
   const { product } = props;
 
   const handleClick = () => {
-    if (bool) {
       navigate(`ProductDetail/${product._id}`, { replace: true });
-    }
   }
 
   const handleAddToCart = (product) => {
