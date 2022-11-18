@@ -10,7 +10,7 @@ import AdminNavBar from '../../Components/AdminNavbar/AdminNavBar';
 
 function Detail() {
   const [product, setProduct] = useState({});
-  const { _id } = useParams();
+  const { id } = useParams();
 
 
 
