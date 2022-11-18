@@ -45,7 +45,7 @@ function Contacto() {
                   <div className="contacto__maps">
                     <a
                       href="https://www.google.com/maps/place/Muebles+Y+Colchones+Marflex/@4.5731052,-74.1533256,18.75z/data=!4m5!3m4!1s0x0:0x41ad0031a300be5e!8m2!3d4.5733188!4d-74.1534082?hl=es-419"
-                      target="_blank" rel="noopener"
+                      target="_blank" rel="noreferrer"
                     >
                       Ver Mapa
                     </a>
