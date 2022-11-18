@@ -47,7 +47,7 @@ function Pago() {
       icon: 'success',
       confirmButtonText: 'Got it!',
     });
-    const res = await createFactura(factura);
+    await createFactura(factura);
     navigate('/', { replace: true });
   }
 
