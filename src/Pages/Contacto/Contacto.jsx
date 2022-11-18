@@ -70,7 +70,7 @@ function Contacto() {
                   <div className="contacto__maps">
                     <a
                       href="https://www.google.com/maps/place/Muebles+Y+Colchones+Marflex/@4.5739211,-74.1567472,16.25z/data=!4m5!3m4!1s0x0:0x41ad0031a300be5e!8m2!3d4.5733188!4d-74.1534082?hl=es-419"
-                      target="_blank" rel="noopener"
+                      target="_blank" rel="noreferrer"
                     >
                       Ver Mapa
                     </a>
@@ -95,7 +95,7 @@ function Contacto() {
                   <div className="contacto__maps">
                     <a
                       href="https://www.google.com/maps/place/Cra.+72D+%2357-14,+Bogot%C3%A1/@4.600856,-74.166636,16z/data=!4m5!3m4!1s0x8e3f9ef7181ea823:0x455a79c7ac2a25e!8m2!3d4.6008564!4d-74.1666358?hl=es-419"
-                      target="_blank" rel="noopener"
+                      target="_blank" rel="noreferrer"
                     >
                       Ver Mapa
                     </a>
@@ -122,7 +122,7 @@ function Contacto() {
                   <div className="contacto__maps">
                     <a
                       href="https://www.google.com/maps/place/Cra.+72D+%2357-14,+Bogot%C3%A1/@4.600856,-74.166636,16z/data=!4m5!3m4!1s0x8e3f9ef7181ea823:0x455a79c7ac2a25e!8m2!3d4.6008564!4d-74.1666358?hl=es-419"
-                      target="_blank" rel="noopener"
+                      target="_blank" rel="noreferrer"
                     >
                       Ver Mapa
                     </a>
@@ -148,7 +148,7 @@ function Contacto() {
                   <div className="contacto__maps">
                     <a
                       href="https://www.google.com/maps/place/Cra.+72D+%2357-14,+Bogot%C3%A1/@4.600856,-74.166636,16z/data=!4m5!3m4!1s0x8e3f9ef7181ea823:0x455a79c7ac2a25e!8m2!3d4.6008564!4d-74.1666358?hl=es-419"
-                      target="_blank" rel="noopener"
+                      target="_blank" rel="noreferrer"
                     >
                       Ver Mapa
                     </a>
@@ -174,7 +174,7 @@ function Contacto() {
                   <div className="contacto__maps">
                     <a
                       href="https://www.google.com/maps/place/Cra.+80+%2363-35,+Bogot%C3%A1/@4.606982,-74.183874,16z/data=!4m5!3m4!1s0x8e3f9e42df242cd7:0x617e282b59e1762e!8m2!3d4.6069824!4d-74.1838738?hl=es-419"
-                      target="_blank" rel="noopener"
+                      target="_blank" rel="noreferrer"
                     >
                       Ver Mapa
                     </a>
