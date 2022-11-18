@@ -39,7 +39,7 @@ function AdminNavBar() {
               Facturas
             </NavLink>
           </nav>
-          <label for="btn-menu_Admin">✖️</label>
+          <label htmlFor="btn-menu_Admin">✖️</label>
         </div>
       </div>
     </div>
