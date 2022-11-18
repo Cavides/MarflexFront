@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addToCart,
   clearCart,
-  decreaseCart,
   getTotals,
-  removeFromCart,
 } from "../../slices/cartSlice";
 
 import Swal from 'sweetalert2';
@@ -201,7 +198,7 @@ function Pago() {
               <div className="pago-form__subtitle">Información de pago</div>
 
               <div className="pago-form__image">
-                <img src={imgpago} />
+                <img src={imgpago}  alt="Formas de pago "/>
               </div>
 
               <div className="pago-form__field">

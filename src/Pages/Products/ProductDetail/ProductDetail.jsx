@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 
 import "./productDetail.css";
 import Header from "../../../Components/Header/Header";
@@ -13,14 +13,14 @@ import { addToCart } from "../../../slices/cartSlice";
 
 function Detail() {
   const [product, setProduct] = useState({});
-  const { _id } = useParams();
+  const { id } = useParams();
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await getProduct(_id);
+      const result = await getProduct(id);
       setProduct(result);
     };
     fetchData();
@@ -45,7 +45,7 @@ function Detail() {
       <h1 className='detail__title'>{`${product.title}`}</h1>
       <div className='detail__info'>
         <div className='detail__imgContainer'>
-          <img className='detail__img' src={product.imagen} />
+          <img className='detail__img' src={product.imagen} alt="Foto actual del producto" />
         </div>
         <div className='detail__text'>
           <h3 className='detail__category'>Categoria : {product.category}</h3>

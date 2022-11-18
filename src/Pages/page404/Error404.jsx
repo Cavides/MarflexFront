@@ -6,7 +6,7 @@ const img ="https://res.cloudinary.com/ds9rxxr5l/image/upload/v1664198872/imagen
 function error404() {
   return (
     <div className="error404">
-    <img src={img} ></img>
+    <img src={img} alt="Error 404" />
 
     </div>
   )

@@ -36,17 +36,17 @@ function Home() {
           <div className="slider-container">
             <ul>
               <li>
-                <img src={mueble1} />{" "}
+                <img src={mueble1} alt="Foto de mueble"/>{" "}
               </li>
               <li>
-                <img src={mueble3} />{" "}
+                <img src={mueble3} alt="Foto de mueble" />{" "}
               </li>
               <li>
                 {" "}
-                <img src={mueble2} />
+                <img src={mueble2} alt="Foto de mueble"/>
               </li>
               <li>
-                <img src={mueble4} />{" "}
+                <img src={mueble4} alt="Foto de mueble" />{" "}
               </li>
             </ul>
           </div>
@@ -57,17 +57,17 @@ function Home() {
               <p>
                 Envios a casi 400 municipios en todo el terriotrio Colombiano
               </p>
-              <img src={img1} />
+              <img src={img1} alt="Figura representativa"/>
             </div>
 
             <div className="Hero__image-uno">
               <p>Ahorra comprando los mejores productos para el hogar</p>
-              <img src={img2} />
+              <img src={img2} alt="Figura representativa"/>
             </div>
 
             <div className="Hero__image-uno">
               <p>Todo lo que necesitas para la comodidad en tu casa</p>
-              <img src={img3} />
+              <img src={img3} alt="Figura representativa"/>
             </div>
           </div>
           {/* productos aleatorios */}
@@ -75,7 +75,7 @@ function Home() {
 
           {/* Imagen de Credito */}
           <div className="Hero__credito">
-            <img src={cred} />
+            <img src={cred} alt="Medios de pago" />
           </div>
         </div>
       </div>

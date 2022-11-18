@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useDispatch} from "react-redux";
+import { useParams } from 'react-router-dom';
+
 
 import "./styles/productDetail.css";
 
