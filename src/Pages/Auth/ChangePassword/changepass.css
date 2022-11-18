@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.main-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-size: cover;
+background-color: whitesmoke;
+}
+
+.changePass-form__title {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+.changePass-form__field-panel{
+    width: 100%;
+    border: 1px solid #d4d4d4;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: white;
+    font-size: 14px;
+    font-weight: bold;
+    }
+
+.changePass-form__forgotpassword{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.changePass-form__submit{
+    width: 100%;
+    height: 40px;
+    background: #d4d4d4;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+}

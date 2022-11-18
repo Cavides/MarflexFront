@@ -1,0 +1,38 @@
+
+.nav{
+    background-color: whitesmoke;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    box-shadow:
+    0.1px 0.2px 2.7px -16px rgba(0, 0, 0, 0.16),
+    2.1px 2.7px 5.5px -16px rgba(0, 0, 0, 0.081),
+    6.2px 7.9px 8.7px -16px rgba(0, 0, 0, 0.065),
+    12.9px 16.4px 13.2px -16px rgba(0, 0, 0, 0.059),
+    23.3px 29.7px 20.7px -16px rgba(0, 0, 0, 0.055),
+    40.1px 51px 38.3px -16px rgba(0, 0, 0, 0.051),
+    77px 98px 124px -16px rgba(0, 0, 0, 0.04)
+  ;
+  margin-top: 12%;
+  position:sticky;
+  top:0;
+  
+}
+
+
+  .nav__menu{
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 65%;
+  }
+  .nav__item{
+    margin-right: 30%;
+    margin-left: 30%;
+  }
+
+  .navBar__navLink{
+    color:#f2b03d;
+    text-decoration: none;
+  }

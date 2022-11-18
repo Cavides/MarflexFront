@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.main-containerPago{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-left: 3%;
+  
+    }
+
+.pago-form{
+  width: 500px;
+  height: 1200px;
+  background: white;
+  margin: auto;
+  margin-top: 10px;
+  padding: 20px 30px;
+  color: black;
+  margin-left: 8%
+}
+
+.pago-form__title {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 30px;
+    font-family: Arial;
+    }
+
+.pago-form__image img{
+    height: 60px;
+    width: auto;
+
+}
+
+.pago-form__field-panel{
+        width: 100%;
+        border: 1px solid #d4d4d4;
+        margin-bottom: 15px;
+        padding: 11px 10px;
+        background: white;
+        font-size: 14px;
+        font-weight: bold;
+        }
+
+.pago-form__comprar{
+    width: 45%;
+    height: 40px;
+    background: #051671;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    margin-left: 40px;
+}
+
+.pago-form__cancelar{
+    width: 45%;
+    height: 40px;
+    background: gray;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+        }
+
+.pago-form__products{
+
+    width: 550px;
+    margin-top: -1142px;
+    margin-left: 52%;
+    margin-bottom: 900px;
+}
+

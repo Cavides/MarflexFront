@@ -1,0 +1,25 @@
+ 
+
+.about-container{
+    margin-top: 2%;
+    margin-left:8%;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 79%;
+    height: 550px;
+    }
+
+.about-container p{
+    color: #636363;
+}
+
+.about__title{
+    border-bottom: 2px solid #f3b03c;
+}
+
+.about__description ul{
+    list-style: none;
+}
+

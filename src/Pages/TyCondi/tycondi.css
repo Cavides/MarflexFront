@@ -1,0 +1,22 @@
+.tyCondi-container{
+    margin-top: 2%;
+    margin-left:8%;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 79%;
+    height: 2600px;
+    }
+
+.tyCondi-container p{
+    color: #636363;
+}
+
+.tyCondi__title{
+    border-bottom: 2px solid #f3b03c;
+}
+
+.tyCondi__description ul{
+    margin-left: 30px;
+}

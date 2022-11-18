@@ -1,0 +1,131 @@
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		
+	}
+	.body_Admin{
+		
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+	}
+	.capa_Admin{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header_Admin{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+
+	.container_Admin{
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.container_Admin .btn-menu_Admin, .logo_Admin{
+		float: left;
+		line-height:100px;
+	}
+	.container_Admin .btn-menu_Admin label{
+		color: black;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	
+	.logo_Admin img{
+		width: 70px;
+		height: auto;
+		margin-left: -150%;
+	}
+
+
+
+
+	.logo_Admin h1{
+		color: black;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container_Admin .menu_Admin{
+		float: right;
+		line-height: 100px;
+	}
+	.container_Admin .menu_Admin a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: black;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container_Admin .menu_Admin a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu_Admin{
+		display: none;
+	}
+	.container-menu_Admin{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu_Admin:checked ~ .container-menu_Admin{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu_Admin{
+		width: 100%;
+		max-width: 250px;
+		background: linear-gradient(220.55deg, #FFD439 0%, #FF7A00 100%);
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu_Admin:checked ~ .container-menu_Admin .cont-menu_Admin{
+		transform: translateX(0%);
+	}
+	.cont-menu_Admin nav{
+		transform: translateY(15%);
+	}
+	.cont-menu_Admin nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: black;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu_Admin nav a:hover{
+		border-left: 2px solid #c7c7c7;
+		background: white;
+	}
+	.cont-menu_Admin label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	/*Fin de Menù lateral*/

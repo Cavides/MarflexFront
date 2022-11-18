@@ -1,0 +1,22 @@
+.CoberEnv-container{
+    margin-top: 2%;
+    margin-left:8%;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 79%;
+    height: 2250px;
+    }
+
+.CoberEnv-container p{
+    color: #636363;
+}
+
+.CoberEnv__title{
+    border-bottom: 2px solid #f3b03c;
+}
+
+.CoberEnv__description ul{
+    margin-left: 30px;
+}

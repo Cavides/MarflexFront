@@ -1,0 +1,110 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+.header{
+    display:inline-block;
+}
+
+
+
+.header__containerLogo{
+    width: 113px;
+    height: 134px;
+    float: left;
+    margin-left: 10%;
+    position:absolute
+}
+
+.header__search-field {
+  display:flex;
+  position:realtive;
+  margin:5em auto;
+  width:40%;
+  float: left;
+  box-shadow:
+   1px 1px 0 white,
+   2px 2px 0 gray,
+   3px 3px 0 gray,
+   4px 4px 0 gray,
+   5px 5px 0 gray,
+   6px 6px 0 gray,
+   7px 7px 0 gray
+  ;
+  margin-left: 30%;
+  margin-top: 3%;
+  position:absolute
+}
+
+.header__search-field>input[type=text],
+.header__search-field>button {
+    
+  font:1.2em 'Montserrat Alternates';
+}
+
+.header__search-field>input[type=text] {
+  flex:1;
+  padding:0.6em;
+  border:0.2em solid white;
+}
+
+.header__search-field>button {
+  padding:0.6em 0.8em;
+  background-color:gray;
+  color:white;
+  border:none;
+  
+}
+
+.header__cuenta{
+    width: 162px;
+    height: auto;
+    float: left;
+    margin-left: 77%;
+    margin-top: 5%;
+    position:absolute
+}
+
+.header__cuenta-menu{
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 65%;
+    
+}
+
+.cuenta__item{
+    margin-right: 2%;
+    margin-left: 2%;
+    color:black;
+    display:inline-block;
+  }
+
+  .header__containerCarrito{
+    height: 40px;
+    width: 60px;
+    float: left;
+    margin-left: 90%;
+    margin-top: 4%;
+    position:absolute;
+    display:flex;
+    align-items: center;
+  }
+  
+  .carrito__quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    background: red;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    color:black;
+    margin-left: 5px;
+
+
+  }
+

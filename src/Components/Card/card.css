@@ -1,0 +1,62 @@
+.card{
+    display: inline-flex;
+    flex-direction: column  ;
+    justify-content: center;
+    max-width: 300px;
+    width: 90%;
+    background-color:rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 1px 30px rgb(65, 65, 65);
+    /* border: 3px solid #403cc2; */
+    border-radius: 47px;
+    border-radius: 47px;
+    background: #fffafa;
+    box-shadow:
+    0.1px 0.2px 2.7px -16px rgba(0, 0, 0, 0.16),
+    2.1px 2.7px 5.5px -16px rgba(0, 0, 0, 0.081),
+    6.2px 7.9px 8.7px -16px rgba(0, 0, 0, 0.065),
+    12.9px 16.4px 13.2px -16px rgba(0, 0, 0, 0.059),
+    23.3px 29.7px 20.7px -16px rgba(0, 0, 0, 0.055),
+    40.1px 51px 38.3px -16px rgba(0, 0, 0, 0.051),
+    77px 98px 124px -16px rgba(0, 0, 0, 0.04)
+  ;
+  }
+  
+  .card__containerImg{
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card__image{
+    max-height: 100%;
+    max-width: 100%;
+    margin: 10px;
+  }
+  
+  .card__title{
+    text-align: center;
+  }
+  .card__down{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .card__button{
+    border: none;
+    min-width: 80px;
+    height: 40px;
+    padding: 0 30px;
+    color: white;
+    display: inline-flex;
+    border-radius: 40px;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3b03c;
+  }
