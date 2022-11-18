@@ -42,7 +42,7 @@ function Detail() {
     <Header />
     <Navbar />
     <div className='detail'>
-      {/* <h1 className='detail__title'>{`${product.title}`}</h1> */}
+      <h1 className='detail__title'>{`${product.title}`}</h1>
       <div className='detail__info'>
         <div className='detail__imgContainer'>
           <img className='detail__img' src={product.imagen} alt="Foto actual del producto" />
