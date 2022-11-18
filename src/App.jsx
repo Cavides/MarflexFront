@@ -42,8 +42,8 @@ function App() {
       <Route path='*' element={<ErrorMessage />} />
       <Route path='/' element={<Home />} />
       <Route path='/products' element={<Products />} />
-      <Route path='products/ProductDetail/:_id' element={<ProductDetail />} />
-      <Route path='admonCatalogo/Product/:_id' element={<ProductAdmon />} />
+      <Route path='products/ProductDetail/:id' element={<ProductDetail />} />
+      <Route path='admonCatalogo/Product/:id' element={<ProductAdmon />} />
       <Route path='/faq' element={<PreguntasFrecuentes />} />
       <Route path='/contacto' element={<Contacto />} />
       <Route path='/about' element={<About />} />
