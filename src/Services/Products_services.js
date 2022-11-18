@@ -28,6 +28,7 @@ const getAllProducts = async () =>{
     const response = await fetch(`${URL}/productos`);
     return await response.json();
   }
+  
 const getProduct = async (_id) =>{
     const response = await fetch(`${URL}/productos/${_id}`);
     return await response.json();
