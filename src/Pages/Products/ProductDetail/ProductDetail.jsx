@@ -13,14 +13,14 @@ import { addToCart } from "../../../slices/cartSlice";
 
 function Detail() {
   const [product, setProduct] = useState({});
-  const { id } = useParams();
+  const { _id } = useParams();
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await getProduct(id);
+      const result = await getProduct(_id);
       setProduct(result);
     };
     fetchData();
