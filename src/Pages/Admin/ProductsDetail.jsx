@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import {updateProduct,deleteProduct} from "../../Services/Products_services";
 
 
 import "./styles/productDetail.css";
@@ -10,13 +11,13 @@ import AdminNavBar from '../../Components/AdminNavbar/AdminNavBar';
 
 function Detail() {
   const [product, setProduct] = useState({});
-  const { id } = useParams();
+  const { _id } = useParams();
 
 
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await getProduct(id);
+      const result = await getProduct(_id);
       setProduct(result);
     };
     fetchData();
@@ -32,16 +33,21 @@ function Detail() {
 
     const handlerSumbit =(e) => {
       e.preventDefault();
+      updateProduct(form);
       console.log("info enviada",form);
     };
 
   return (
     <div>
     <AdminNavBar />
-    <div className='detail'>
+    <div className='detailAdmon'>
+
     <form onSubmit={handlerSumbit}>
 
     <label>
+    <div className='detailprod_admon'>
+      Code:
+    </div>
     <input
         className='Proudct-title'
         name = "code"
@@ -52,6 +58,9 @@ function Detail() {
 
 
     <label>
+    <div className='detailprod_admon'>
+      Titulo:
+    </div>
     <input
         className='Proudct-title'
         name = "title"
@@ -62,6 +71,9 @@ function Detail() {
 
 
     <label>
+    <div className='detailprod_admon'>
+      Tipo:
+    </div>
     <input
         className='Proudct-title'
         name = "type"
@@ -71,6 +83,9 @@ function Detail() {
     </label>
 
     <label>
+    <div className='detailprod_admon'>
+     Categoria:
+    </div>
     <input
         className='Proudct-title'
         name = "category"
@@ -80,6 +95,9 @@ function Detail() {
     </label>
 
     <label>
+    <div className='detailprod_admon'>
+      Resumen:
+    </div>
     <input
         className='Proudct-title'
         name = "desc"
@@ -89,6 +107,9 @@ function Detail() {
     </label>
 
     <label>
+    <div className='detailprod_admon'>
+      Descripcion:
+    </div>
     <input
         className='Proudct-title'
         name = "descripcion"
@@ -98,6 +119,9 @@ function Detail() {
     </label>
 
     <label>
+    <div className='detailprod_admon'>
+      Precio:
+    </div>
     <input
         className='Proudct-title'
         name = "price"
@@ -107,6 +131,9 @@ function Detail() {
     </label>
 
     <label>
+    <div className='detailprod_admon'>
+      Medidas:
+    </div>
     <input
         className='Proudct-title'
         name = "medidas"
@@ -116,6 +143,9 @@ function Detail() {
     </label>
     
     <label>
+    <div className='detailprod_admon'>
+      Material:
+    </div>
     <input
         className='Proudct-title'
         name = "material"
@@ -125,6 +155,9 @@ function Detail() {
     </label>
 
     <label>
+    <div className='detailprod_admon'>
+      Garantia:
+    </div>
     <input
         className='Proudct-title'
         name = "garantia"
@@ -134,6 +167,9 @@ function Detail() {
     </label>
 
     <label>
+    <div className='detailprod_admon'>
+      Armado:
+    </div>
     <input
         className='Proudct-title'
         name = "armado"
@@ -143,6 +179,9 @@ function Detail() {
     </label>
 
     <label>
+    <div className='detailprod_admon'>
+      Recomendaciones:
+    </div>
     <input
         className='Proudct-title'
         name = "recomendaciones"
@@ -152,6 +191,12 @@ function Detail() {
     </label>
 
     <label>
+    <div className='detailprod_admon'>
+      Imagen:
+    </div>
+    <div className='detailprod_img'>
+      <img src={product.imagen} alt="imagen del producto"/>
+    </div>
     <input
         className='Proudct-title'
         name = "imagen"
@@ -160,9 +205,11 @@ function Detail() {
     />
     </label>
     
-    
-
+    <button type="submit" className="admon__submit" >Modificar</button>
         </form>
+
+        <button type="submit" className="admon__submit" >Eliminar</button>
+
         </div>
     </div>
   );

@@ -10,7 +10,7 @@ function Card(props) {
   const { product } = props;
 
   const handleClick = () => {
-    navigate(`Product/${product.id}`, { replace: true });
+    navigate(`Product/${product._id}`, { replace: true });
   };
 
   return (
