@@ -7,12 +7,12 @@ import "./card.css";
 
 function Card(props) {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+ 
 
   const { pedido } = props;
 
   const handleClick = () => {
-    navigate(`ProductDetail/${pedido._id}`);
+    navigate(`pedidoDetail/${pedido._id}`);
   };
 
 
