@@ -37,6 +37,11 @@ function Detail() {
       console.log("info enviada",form);
     };
 
+    const handlerDelete =(e) => {
+      e.preventDefault();
+      deleteProduct();
+    };
+
   return (
     <div>
     <AdminNavBar />
@@ -208,7 +213,7 @@ function Detail() {
     <button type="submit" className="admon__submit" >Modificar</button>
         </form>
 
-        <button type="submit" className="admon__submit" >Eliminar</button>
+        <button type="submit" className="admon__submit" onClick={handlerDelete}>Eliminar</button>
 
         </div>
     </div>
