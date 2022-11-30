@@ -16,6 +16,7 @@ const getAllPedidos = async () =>{
     const response = await fetch(`${URL}/pedidos`);
     return await response.json();
   }
+  
 const getPedido = async (id) =>{
     const response = await fetch(`${URL}/pedidos/${id}`);
     return await response.json();

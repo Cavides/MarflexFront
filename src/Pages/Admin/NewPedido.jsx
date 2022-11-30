@@ -35,7 +35,7 @@ function NewPedido() {
               />
               <input
                 className="controls_formulario" onChange={handlerChange}
-                type="text"
+                type="number"
                 name="numfactura"
                 placeholder="Numero de factura"
               />
@@ -68,12 +68,6 @@ function NewPedido() {
                 type="text"
                 name="especificacion"
                 placeholder="Especificacion de producto"
-              />
-              <input
-                className="controls_formulario" onChange={handlerChange}
-                type="text"
-                name="NombreVendedor"
-                placeholder="Nombre del vendedor"
               />
               <input
                 className="controls_formulario" onChange={handlerChange}

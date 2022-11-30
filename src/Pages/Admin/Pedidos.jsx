@@ -1,8 +1,22 @@
 import AdminNavBar from "../../Components/AdminNavbar/AdminNavBar";
 import React from 'react';
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getAllPedidos } from "../../Services/Pedidos_services";
+import Card from "../../Components/CardPedidos/Card";
 
 function Pedidos() {
+
+  const [pedidos, setPedidos] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getAllPedidos();
+      setPedidos(result);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div>
       <AdminNavBar />
@@ -24,6 +38,12 @@ function Pedidos() {
         </svg>
       </div>
       </Link>
+
+      <div className="catalogoAdmon__pedidos">
+        {pedidos.map((pedido) => {
+          return <Card product={pedido} key={pedido.numfactura} />;
+        })}
+      </div>
     </div>
   )
 }
