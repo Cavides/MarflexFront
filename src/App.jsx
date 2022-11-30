@@ -33,6 +33,7 @@ import CatalogoAdmin from "./Pages/Admin/CatalogoAdmin";
 import Facturas from "./Pages/Admin/Facturas";
 import Pedidos from "./Pages/Admin/Pedidos";
 import ProductAdmon  from './Pages/Admin/ProductsDetail';
+import NewProduct  from './Pages/Admin/NewProduct';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
       <Route path='/products' element={<Products />} />
       <Route path='products/ProductDetail/:_id' element={<ProductDetail />} />
       <Route path='admonCatalogo/Product/:_id' element={<ProductAdmon />} />
+      <Route path='/newproduct' element={<NewProduct/>} />
       <Route path='/faq' element={<PreguntasFrecuentes />} />
       <Route path='/contacto' element={<Contacto />} />
       <Route path='/about' element={<About />} />
@@ -63,6 +65,7 @@ function App() {
       <Route path='/admonCatalogo' element={<CatalogoAdmin/>} />
       <Route path='/facturas' element={<Facturas/>} />
       <Route path='/pedidos' element={<Pedidos/>} />
+      
       </Routes>
     </BrowserRouter>
   );
