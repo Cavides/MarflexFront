@@ -28,79 +28,79 @@ function NewPedido() {
             <p>Por favor diligencie la siguiente información</p>
             <form onSubmit={handlerSumbit}>
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="date"
                 name="fechaPedido"
                 placeholder="Fecha pedido"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="text"
                 name="numfactura"
                 placeholder="Numero de factura"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="text"
                 name="almacen"
                 placeholder="Almacen"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="text"
                 name="nombreProducto"
                 placeholder="Nombre del producto"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="text"
                 name="color"
                 placeholder="Color del producto"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="text"
                 name="medida"
                 placeholder="Medida del producto"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="text"
                 name="especificacion"
                 placeholder="Especificacion de producto"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="text"
                 name="NombreVendedor"
                 placeholder="Nombre del vendedor"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="file"
                 name="foto"
                 placeholder="Foto del producto"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="date"
                 name="fechaEntrega"
                 placeholder="Fecha de entrega"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="date"
                 name="asesor"
                 placeholder="Asesor"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="text"
                 name="proveedor"
                 placeholder="Nombre Proveedor"
               />
               <input
-                className="controls_formulario"
+                className="controls_formulario" onChange={handlerChange}
                 type="text"
                 name="valorVenta"
                 placeholder="Total: $"

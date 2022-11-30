@@ -34,6 +34,7 @@ import Facturas from "./Pages/Admin/Facturas";
 import Pedidos from "./Pages/Admin/Pedidos";
 import ProductAdmon  from './Pages/Admin/ProductsDetail';
 import NewProduct  from './Pages/Admin/NewProduct';
+import NewPedido  from './Pages/Admin/NewPedido';
 
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
       <Route path='/admonCatalogo' element={<CatalogoAdmin/>} />
       <Route path='/facturas' element={<Facturas/>} />
       <Route path='/pedidos' element={<Pedidos/>} />
+      <Route path='/newpedido' element={<NewPedido/>} />
       
       </Routes>
     </BrowserRouter>
