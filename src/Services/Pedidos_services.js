@@ -46,4 +46,9 @@ const getPedido = async (id) =>{
     return response.json();
   }
 
+  export async function getPedidoByCode(numfactura) {
+    const response = await fetch(`${URL}/pedidos/numfactura/${numfactura}`, {});
+    return response.json();
+  }
+
   export {createPedido, getAllPedidos, getPedido, updatePedido, deletePedido, };

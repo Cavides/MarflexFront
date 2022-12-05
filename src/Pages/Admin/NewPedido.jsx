@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import AdminNavBar from "../../Components/AdminNavbar/AdminNavBar";
+import {createPedido, getPedidoByCode} from "../../Services/Pedidos_services";
 
 import "./styles/formulario.css";
 
@@ -12,8 +13,14 @@ function NewPedido() {
     setForm({ ...form, [key]: value });
   };
 
+  const newPedido = async() =>{
+    const pedido = await getPedidoByCode(form.numfactura);
+
+  }
+
   const handlerSumbit = (e) => {
     e.preventDefault();
+    newPedido();
     console.log("info enviada", form);
   };
 
@@ -71,7 +78,7 @@ function NewPedido() {
               />
               <input
                 className="controls_formulario" onChange={handlerChange}
-                type="file"
+                type="text"
                 name="foto"
                 placeholder="Foto del producto"
               />
@@ -83,7 +90,7 @@ function NewPedido() {
               />
               <input
                 className="controls_formulario" onChange={handlerChange}
-                type="date"
+                type="text"
                 name="asesor"
                 placeholder="Asesor"
               />
