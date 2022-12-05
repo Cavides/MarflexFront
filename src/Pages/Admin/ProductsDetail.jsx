@@ -56,7 +56,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "code"
-        value={product.code} onChange={handlerChange}
+        defaultValue={product.code} onChange={handlerChange}
         required
     />
     </label>
@@ -69,7 +69,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "title"
-        value={product.title} onChange={handlerChange}
+        defaultValue={product.title} onChange={handlerChange}
         required
     />
     </label>
@@ -82,7 +82,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "type"
-        value={product.type} onChange={handlerChange}
+        defaultValue={product.type} onChange={handlerChange}
         required
     />
     </label>
@@ -94,7 +94,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "category"
-        value={product.category} onChange={handlerChange}
+        defaultValue={product.category} onChange={handlerChange}
         required
     />
     </label>
@@ -106,7 +106,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "desc"
-        value={product.desc} onChange={handlerChange}
+        defaultValue={product.desc} onChange={handlerChange}
         required
     />
     </label>
@@ -118,7 +118,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "descripcion"
-        value={product.descripcion} onChange={handlerChange}
+        defaultValue={product.descripcion} onChange={handlerChange}
         required
     />
     </label>
@@ -130,7 +130,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "price"
-        value={product.price} onChange={handlerChange}
+        defaultValue={product.price} onChange={handlerChange}
         required
     />
     </label>
@@ -142,7 +142,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "medidas"
-        value={product.medidas} onChange={handlerChange}
+        defaultValue={product.medidas} onChange={handlerChange}
         required
     />
     </label>
@@ -154,7 +154,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "material"
-        value={product.material} onChange={handlerChange}
+        defaultValue={product.material} onChange={handlerChange}
         required
     />
     </label>
@@ -166,7 +166,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "garantia"
-        value={product.garantia} onChange={handlerChange}
+        defaultValue={product.garantia} onChange={handlerChange}
         required
     />
     </label>
@@ -178,7 +178,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "armado"
-        value={product.armado} onChange={handlerChange}
+        defaultValue={product.armado} onChange={handlerChange}
         required
     />
     </label>
@@ -190,7 +190,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "recomendaciones"
-        value={product.recomendaciones} onChange={handlerChange}
+        defaultValue={product.recomendaciones} onChange={handlerChange}
         required
     />
     </label>
@@ -205,7 +205,7 @@ function Detail() {
     <input
         className='Proudct-title'
         name = "imagen"
-        value={product.imagen} onChange={handlerChange}
+        defaultValue={product.imagen} onChange={handlerChange}
         required
     />
     </label>

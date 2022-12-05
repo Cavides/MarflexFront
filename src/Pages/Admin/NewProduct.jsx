@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import AdminNavBar from "../../Components/AdminNavbar/AdminNavBar";
+import {createProduct} from "../../Services/Products_services";
+
+import "./styles/newProducts.css"
 
 function NewProdruct() {
   const [form, setForm] = useState({});
@@ -12,12 +15,15 @@ function NewProdruct() {
 
   const handlerSumbit = (e) => {
     e.preventDefault();
+    createProduct(form);
     console.log("info enviada", form);
   };
 
   return (
     <div>
       <AdminNavBar />
+
+      <div className="newproduct-container">
 
       <form onSubmit={handlerSumbit}>
         <input
@@ -60,7 +66,7 @@ function NewProdruct() {
           className="newProduct_formulario" onChange={handlerChange}
           type="number"
           name="price"
-          placeholder="Especificacion de producto"
+          placeholder="Valor del proudcto"
         />
         <input
           className="newProduct_formulario" onChange={handlerChange}
@@ -103,6 +109,7 @@ function NewProdruct() {
           Agregar Producto
         </button>
       </form>
+      </div>
     </div>
   );
 }

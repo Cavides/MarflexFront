@@ -1,16 +1,16 @@
 const URL = "https://marflexback-production.up.railway.app";
 
-const createPedido= async(pedido) =>{
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(pedido),
-        headers: {
-            'Content-Type': 'application/json',
-        }
-};
-    const newPedido = await fetch(URL,options);
-    return newPedido.json();
+export async function createPedido(pedido) {
+  const response = await fetch(`${URL}/pedidos`, {
+    method: 'POST',
+    body: JSON.stringify(pedido),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  return response.text();
 }
+
 
 const getAllPedidos = async () =>{
     const response = await fetch(`${URL}/pedidos`);
@@ -51,4 +51,4 @@ const getPedido = async (id) =>{
     return response.json();
   }
 
-  export {createPedido, getAllPedidos, getPedido, updatePedido, deletePedido, };
+  export { getAllPedidos, getPedido, updatePedido, deletePedido, };

@@ -1,16 +1,5 @@
 const URL = "https://marflexback-production.up.railway.app"
 
-// const createProduc= async(product) =>{
-//     const options = {
-//         method: 'POST',
-//         body: JSON.stringify(product),
-//         headers: {
-//             'Content-Type': 'application/json',
-//         }
-// };
-//     const newProduct = await fetch('{URL}/productos',options);
-//     return newProduct.json();
-// }
 
 const createProduct = async(product) =>{
   const response = await fetch(`${URL}/productos`, {

@@ -13,14 +13,15 @@ function NewPedido() {
     setForm({ ...form, [key]: value });
   };
 
-  const newPedido = async() =>{
-    const pedido = await getPedidoByCode(form.numfactura);
+  // const newPedido = async() =>{
+  //   const pedido = await getPedidoByCode(form.numfactura);
 
-  }
+  // }
 
   const handlerSumbit = (e) => {
     e.preventDefault();
-    newPedido();
+    // newPedido();
+    createPedido(form);
     console.log("info enviada", form);
   };
 
