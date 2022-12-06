@@ -31,7 +31,8 @@ function Register() {
         confirmButtonText: 'Got it!',
       });
     } else {
-      const res = await createUser(form);
+      const response = await createUser(form);
+      const res = JSON.parse(response);
       if (res.details) {
         if (res.details[0].message.includes('password')) {
           res.details[0].message = `Password needs to be at least 6 characters long and include only alphanumeric!`;
