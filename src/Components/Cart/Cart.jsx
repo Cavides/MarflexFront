@@ -84,7 +84,7 @@ const Cart = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="cart-product-price">${cartItem.price}</div>
+                  <div className="cart-product-price">{Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(cartItem.price)}</div>
                   <div className="cart-product-quantity">
                     <button onClick={() => handleDecreaseCart(cartItem)}>
                       -

@@ -29,7 +29,7 @@ function Card(props) {
         <img src={product.imagen} className="card__image" alt="Imagen del producto"/>
       </div>
       <h3 className="card__title">{product.desc}</h3>
-      <h3 className="card__title">${product.price}</h3>
+      <h3 className="card__title">{Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(product.price)}</h3>
 
       <div className="card__down">
         <button type="button" className="card__button" onClick={handleClick}>
