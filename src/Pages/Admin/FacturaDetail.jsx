@@ -31,8 +31,13 @@ function FacturaDetail() {
       <h3 className="facturacard__title"><a>Fecha de Facturacion: </a>{factura.createdAt}</h3>
       <h3 className="facturacard__title"><a>Comprador:</a> {factura.name} {factura.lastName}</h3>
       <h3 className="facturacard__title"><a>Documento:</a> {factura.doc}</h3>
+      <h3 className="facturacard__title"><a>Telefono:</a> {factura.telephone}</h3>
+      <h3 className="facturacard__title"><a>Correo Electronico: </a> {factura.email}</h3>
       <h3 className="facturacard__title"><a>Departamento:</a> {factura.departamento}</h3>
        <h3 className="facturacard__title"><a>Ciudad:</a> {factura.ciudad}</h3>
+       <h3 className="facturacard__title"><a>Direcciónn</a> {factura.direccion}</h3>
+       <h3 className="facturacard__title"><a>Descripción:</a> {factura.descripcion}</h3>
+       <h3 className="facturacard__title"><a>Productos:</a> {factura.productos}</h3>
        <h3 className="facturacard__title"><a>Total venta:</a> {factura.total}</h3>
       </div>
 
