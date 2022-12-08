@@ -36,6 +36,7 @@ import ProductAdmon  from './Pages/Admin/ProductsDetail';
 import NewProduct  from './Pages/Admin/NewProduct';
 import NewPedido  from './Pages/Admin/NewPedido';
 import PedidoAdmon from './Pages/Admin/PedidosDetail';
+import FacturaAdmon from './Pages/Admin/FacturaDetail';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
       <Route path='products/ProductDetail/:_id' element={<ProductDetail />} />
       <Route path='admonCatalogo/Product/:_id' element={<ProductAdmon />} />
       <Route path='pedidos/pedidoDetail/:_id' element={<PedidoAdmon />} />
+      <Route path='facturas/facturaDetail/:_id' element={<FacturaAdmon />} />
       <Route path='/newproduct' element={<NewProduct/>} />
       <Route path='/faq' element={<PreguntasFrecuentes />} />
       <Route path='/contacto' element={<Contacto />} />

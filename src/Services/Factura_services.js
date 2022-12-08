@@ -2,17 +2,19 @@
 
 const URL = "https://marflexback-production.up.railway.app";
 
-const createFactura= async(factura) =>{
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(factura),
-        headers: {
-            'Content-Type': 'application/json',
-        }
-};
-    const newFactura = await fetch(URL,options);
-    return newFactura;
+
+const createFactura = async(factura) =>{
+  const response = await fetch(`${URL}/facturas`, {
+    method: 'POST',
+    body: JSON.stringify(factura),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  return response.text();
 }
+
+
 
 const getAllFacturas = async () =>{
     const response = await fetch(`${URL}/facturas`);

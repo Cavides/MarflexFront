@@ -2,3 +2,181 @@
     margin-left: 20%;
     margin-top: 20%;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+.font_M{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+.body_M{
+  background: #e7d7a7;
+  padding: 0 10px;
+}
+.wrapper_M{
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+
+.wrapper_M .title_M{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fec107;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper_M .form_M{
+  width: 100%;
+}
+
+.wrapper_M .form_M .field_M{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper_M .form_M .field_M label{
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper_M .form_M .field_M .input_M,
+.wrapper_M .form_M .field_M .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper_M .form_M .field_M .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper_M .form_M .field_M .custom_select_M{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper_M .form_M .field_M .custom_select_M:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper_M .form_M .field_M .custom_select_M select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper_M .form_M .field_M .input_M:focus,
+.wrapper_M .form_M .field_M .textarea:focus,
+.wrapper_M .form_M .field_M .custom_select_M select:focus{
+  border: 1px solid #fec107;
+}
+
+.wrapper_M .form_M .field_M p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper_M .form_M .field_M .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper_M .form_M .field_M .check input_M[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper_M .form_M .field_M .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fec107;
+  display: block;
+  position: relative;
+}
+.wrapper_M .form_M .field_M .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper_M .form_M .field_M .check input_M[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper_M .form_M .field_M .check input_M[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper_M .form_M .field_M .btn_M{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #fec107;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper_M .form_M .field_M .btn_M:hover{
+  background: #ffd658;
+}
+
+.wrapper_M .form_M .field_M:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper_M .form_M .field_M{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper_M .form_M .field_M label{
+    margin-bottom: 5px;
+  }
+  .wrapper_M .form_M .field_M.terms{
+    flex-direction: row;
+  }
+}

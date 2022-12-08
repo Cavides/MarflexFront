@@ -17,6 +17,7 @@ function Card(props) {
 
   return (
     <div className="card">
+      <h3 className="card__title">{pedido.numfactura}</h3>
       <h3 className="card__title">{pedido.nombreProducto}</h3>
       <h3 className="card__title">{pedido.fechaEntrega}</h3> 
       <h3 className="card__title">{pedido.medida}</h3>
