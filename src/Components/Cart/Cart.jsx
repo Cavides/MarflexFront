@@ -92,8 +92,8 @@ const Cart = () => {
                     <div className="count">{cartItem.cartQuantity}</div>
                     <button onClick={() => handleAddToCart(cartItem)}>+</button>
                   </div>
-                  <div className="cart-product-total-price">
-                    ${cartItem.price * cartItem.cartQuantity}
+                  <div className="cart-product-total-price"> 
+                    {Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(cartItem.price * cartItem.cartQuantity)}
                   </div>
                 </div>
               ))}
@@ -105,7 +105,7 @@ const Cart = () => {
             <div className="cart-checkout">
               <div className="subtotal">
                 <span>Total</span>
-                <span className="amount">${cart.cartTotalAmount}</span>
+                <span className="amount">{Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(cart.cartTotalAmount)}</span>
               </div>
               <p>Impuestos y envios incluidos</p>
               <button><Link to="/pago" className="navBar__navLink">Continuar con la compra</Link></button>
