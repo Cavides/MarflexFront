@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,Link} from 'react-router-dom';
 import {updatePedido,deletePedido} from "../../Services/Pedidos_services";
 
 
@@ -45,162 +45,164 @@ function PedidosDetail() {
 
     
   return (
-    <div>
+    <div className='container-cataadmon'>
     <AdminNavBar />
-    <div className='detailAdmon-Pedidos'>
+    <div className='detailAdmon-pedidos'>
 
     <form onSubmit={handlerSumbit}>
 
     <label>
-    <div className='detailprod_admon'>
-      Numero de Factura:
-    </div>
+    <div className='detailpedido_admon-numfact'>
+      <h3>N° de Factura</h3>
     <input
-        className='Proudct-title'
+        className='detailpedido__field-panelcode'
         name = "numfactura"
         defaultValue={pedido.numfactura} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
 
     <label>
-    <div className='detailprod_admon'>
-      Titulo:
-    </div>
+    <div className='detailpedido_admon-titulo'>
+      <h3>Titulo:</h3>
     <input
-        className='Proudct-title'
+        className='detailpedido__field-panelnombreprodc'
         name = "nombreProducto"
         defaultValue={pedido.nombreProducto} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
 
     <label>
-    <div className='detailprod_admon'>
-      Fecha de Pedido:
-    </div>
+    <div className='detailpedido_admon-fechapedido'>
+     <h3>Fecha de Pedido:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailpedido__field-panelfechapedido'
         name = "fechaPedido"
         defaultValue={pedido.fechaPedido} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-    Almacen:
-    </div>
+    <div className='detailpedido_admon-alamcen'>
+    <h3>Almacen:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailpedido__field-panelalmacen'
         name = "almacen"
         defaultValue={pedido.almacen} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-      Color
-    </div>
+    <div className='detailpedido_admon-color'>
+      <h3>Color:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailpedido__field-panelcolor'
         name = "color"
         defaultValue={pedido.color} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-     Medidas:
-    </div>
-    <input
-        className='Proudct-title'
-        name = "medida"
-        defaultValue={pedido.medida} onChange={handlerChange}
-        required
-    />
-    </label>
-
-    <label>
-    <div className='detailprod_admon'>
-      Especificacion:
-    </div>
-    <input
-        className='Proudct-title'
-        name = "especificacion"
-        defaultValue={pedido.especificacion} onChange={handlerChange}
-        required
-    />
-    </label>
-
-    <label>
-    <div className='detailprod_admon'>
-      Foto de Referencia
-    </div>
-    <input
-        className='Proudct-title'
-        name = "foto"
-        defaultValue={pedido.foto} onChange={handlerChange}
-        required
-    />
-    </label>
+    <div className='detailpedido_admon-fechaentrega'>
+      <h3>Fecha de Entrega:</h3>
     
-    <label>
-    <div className='detailprod_admon'>
-      Fecha de Entrega:
-    </div>
     <input
-        className='Proudct-title'
+        className='detailpedido__field-panelfechaentrega'
         name = "fechaEntrega"
         defaultValue={pedido.fechaEntrega} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-      Asesor
-    </div>
+    <div className='detailpedido_admon-medidas'>
+     <h3>Medidas:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailpedido__field-panelmedidas'
+        name = "medida"
+        defaultValue={pedido.medida} onChange={handlerChange}
+        required
+    /></div>
+    </label>
+
+    <label>
+    <div className='detailpedido_admon-especificacion'>
+      <h3>Especificacion:</h3>
+    
+    <input
+        className='detailpedido__field-panelespecificacion'
+        name = "especificacion"
+        defaultValue={pedido.especificacion} onChange={handlerChange}
+        required
+    /></div>
+    </label>
+
+    <label>
+    <div className='detailpedido_admon-foto'>
+      <h3>Foto de Referencia</h3>
+    
+    <input
+        className='detailpedido__field-panelfoto'
+        name = "foto"
+        defaultValue={pedido.foto} onChange={handlerChange}
+        required
+    /></div>
+    </label>
+    
+    
+
+    <label>
+    <div className='detailpedido_admon-asesor'>
+      <h3>Asesor</h3>
+    
+    <input
+        className='detailpedido__field-panelasesor'
         name = "asesor"
         defaultValue={pedido.asesor} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-      Proveedor
-    </div>
+    <div className='detailpedido_admon-proveedor'>
+      <h3>Proveedor</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailpedido__field-panelproveedor'
         name = "proveedor"
         defaultValue={pedido.proveedor} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-      Valor:
-    </div>
+    <div className='detailpedido_admon-valor'>
+      <h3>Valor:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailpedido__field-panelvalor'
         name = "valorVenta"
         defaultValue={pedido.valorVenta} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
+
+    <Link to="/pedidos"><button type="submit" className="admoncatalogo__regresar" >Regresar</button></Link>
     
-    <button type="submit" className="admon__submit" >Modificar</button>
+    <button type="submit" className="admoncatalogo__submit" >Modificar</button>
         </form>
 
-        <button type="submit" className="admon__submit" onClick={handlerDelete}>Eliminar</button>
+        <button type="submit" className="admoncatalogo__eliminar" onClick={handlerDelete}>Eliminar</button>
 
         </div>
     </div>

@@ -1,182 +1,251 @@
-.detailAdmon-Pedidos{
-    margin-left: 20%;
-    margin-top: 20%;
+.container-cataadmon{
+  background-image: url("https://res.cloudinary.com/ds9rxxr5l/image/upload/v1670553174/imagenes/HD-wallpaper-raw-wood-abstract-natural_ugvs0l.jpg");
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
-
-.font_M{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-.body_M{
-  background: #e7d7a7;
-  padding: 0 10px;
-}
-.wrapper_M{
-  max-width: 500px;
-  width: 100%;
-  background: #fff;
-  margin: 20px auto;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
-  padding: 30px;
-}
-
-.wrapper_M .title_M{
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #fec107;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.wrapper_M .form_M{
-  width: 100%;
-}
-
-.wrapper_M .form_M .field_M{
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.wrapper_M .form_M .field_M label{
-   width: 200px;
-   color: #757575;
-   margin-right: 10px;
+.detailAdmon-pedidos {
+  margin: 20%;
+  width: 1100px;
+  height: 670px;
+  background: #f3b03c;
+  margin: auto;
+  margin-top: 7.6%;
+  box-shadow: 7px 13px 37px #000;
+  padding: 20px 30px;
+  border-top: 4px solid #1d1d1d;
+  color: white;
+  text-decoration: none;
   font-size: 14px;
 }
 
-.wrapper_M .form_M .field_M .input_M,
-.wrapper_M .form_M .field_M .textarea{
-  width: 100%;
-  outline: none;
-  border: 1px solid #d5dbd9;
+.detail__title {
+  text-align: center;
+}
+
+.detailpedido_img img {
+  height: 200px;
+  width: auto;
+}
+
+.detailpedido__field-panelcode {
+  align-items: baseline;
+  width: 10%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
   font-size: 15px;
-  padding: 8px 10px;
-  border-radius: 3px;
-  transition: all 0.3s ease;
+  font-weight: bold;
 }
 
-.wrapper_M .form_M .field_M .textarea{
-  width: 100%;
-  height: 125px;
-  resize: none;
-}
-
-.wrapper_M .form_M .field_M .custom_select_M{
-  position: relative;
-  width: 100%;
-  height: 37px;
-}
-
-.wrapper_M .form_M .field_M .custom_select_M:before{
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 10px;
-  border: 8px solid;
-  border-color: #d5dbd9 transparent transparent transparent;
-  pointer-events: none;
-}
-
-.wrapper_M .form_M .field_M .custom_select_M select{
-  -webkit-appearance: none;
-  -moz-appearance:   none;
-  appearance:        none;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  border: 0px;
-  padding: 8px 10px;
+.detailpedido__field-panelnombreprodc {
+  align-items: baseline;
+  width: 50%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
   font-size: 15px;
-  border: 1px solid #d5dbd9;
-  border-radius: 3px;
+  font-weight: bold;
 }
 
-
-.wrapper_M .form_M .field_M .input_M:focus,
-.wrapper_M .form_M .field_M .textarea:focus,
-.wrapper_M .form_M .field_M .custom_select_M select:focus{
-  border: 1px solid #fec107;
-}
-
-.wrapper_M .form_M .field_M p{
-   font-size: 14px;
-   color: #757575;
-}
-.wrapper_M .form_M .field_M .check{
-  width: 15px;
-  height: 15px;
-  position: relative;
-  display: block;
-  cursor: pointer;
-}
-.wrapper_M .form_M .field_M .check input_M[type="checkbox"]{
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-.wrapper_M .form_M .field_M .check .checkmark{
-  width: 15px;
-  height: 15px;
-  border: 1px solid #fec107;
-  display: block;
-  position: relative;
-}
-.wrapper_M .form_M .field_M .check .checkmark:before{
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  width: 5px;
-  height: 2px;
-  border: 2px solid;
-  border-color: transparent transparent #fff #fff;
-  transform: rotate(-45deg);
-  display: none;
-}
-.wrapper_M .form_M .field_M .check input_M[type="checkbox"]:checked ~ .checkmark{
-  background: #fec107;
-}
-
-.wrapper_M .form_M .field_M .check input_M[type="checkbox"]:checked ~ .checkmark:before{
-  display: block;
-}
-
-.wrapper_M .form_M .field_M .btn_M{
+.detailpedido__field-panelfechapedido {
+  align-items: baseline;
   width: 100%;
-   padding: 8px 10px;
-  font-size: 15px; 
-  border: 0px;
-  background:  #fec107;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 3px;
-  outline: none;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.wrapper_M .form_M .field_M .btn_M:hover{
-  background: #ffd658;
+.detailpedido__field-panelalmacen {
+  align-items: baseline;
+  width: 40%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.wrapper_M .form_M .field_M:last-child{
-  margin-bottom: 0;
+.detailpedido__field-panelcolor {
+  align-items: baseline;
+  width: 27%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-@media (max-width:420px) {
-  .wrapper_M .form_M .field_M{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .wrapper_M .form_M .field_M label{
-    margin-bottom: 5px;
-  }
-  .wrapper_M .form_M .field_M.terms{
-    flex-direction: row;
-  }
+
+.detailpedido__field-panelvalor {
+  align-items: baseline;
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
 }
+
+.detailpedido__field-panelmedidas {
+  align-items: baseline;
+  width: 40%;
+
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailpedido__field-panelespecificacion{
+  align-items: baseline;
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailpedido__field-panelfoto{
+  align-items: baseline;
+  width: 100%;
+
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailpedido__field-panelfechaentrega{
+  align-items: baseline;
+  width: 100%;
+
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailpedido__field-panelasesor{
+  align-items: baseline;
+  width: 40%;
+
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailpedido__field-panelproveedor{
+  align-items: baseline;
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailpedido_admon-numfact{
+  margin-top: 0%;
+  margin-left:0%
+}
+
+.detailpedido_admon-titulo{
+  margin-top: -8%;
+  margin-left:15%
+}
+
+.detailpedido_admon-fechapedido{
+  margin-top: -8%;
+  margin-left:60%
+}
+
+.detailpedido_admon-almacen{
+  margin-top: -8%;
+  margin-left:80%
+}
+
+.detailpedido_admon-color{
+  margin-top: -8%;
+  margin-left:42%
+}
+
+.detailpedido_admon-medidas{
+  margin-top: 0%;
+  margin-left:0%
+}
+
+.detailpedido_admon-especificacion{
+  margin-top: -8%;
+  margin-left: 42%
+}
+
+.detailpedido_admon-foto{
+  margin-top: 0%;
+  margin-left:0%
+}
+
+.detailpedido_admon-fechaentrega{
+  margin-top: -8%;
+  margin-left:60%
+}
+
+.detailpedido_admon-asesor{
+  margin-top: 0%;
+  margin-left:0%
+}
+
+.detailpedido_admon-proveedor{
+  margin-top: -8%;
+  margin-left:50%
+}
+
+.detailpedido_admon-valor{
+  margin-top: 0%;
+  margin-left:75%
+}
+
+.admoncatalogo__submit{
+  width: 100%;
+  height: 40px;
+  background: #024ff5;
+  border: none;
+  color: white;
+  margin-bottom: 16px;
+  }
+
+  .admoncatalogo__eliminar{
+    width: 100%;
+    height: 40px;
+    background: #ac0a0a;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    }
+
+    .admoncatalogo__regresar{
+      width: 100%;
+      height: 40px;
+      background: #706f6f;
+      border: none;
+      color: white;
+      margin-bottom: 16px;
+      }
