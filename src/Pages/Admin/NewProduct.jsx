@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 import AdminNavBar from "../../Components/AdminNavbar/AdminNavBar";
 import {createProduct} from "../../Services/Products_services";
 
@@ -141,9 +142,10 @@ function NewProdruct() {
         </button>
       </form>
 
-      <button className="admoncatalogo__cancelar" type="submit">
+      <Link to="/admonCatalogo"><button className="admoncatalogo__cancelar" type="submit">
           Cancelar
         </button>
+        </Link>
       </div>
     </div>
   );

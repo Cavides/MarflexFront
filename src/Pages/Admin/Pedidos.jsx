@@ -19,7 +19,7 @@ function Pedidos() {
   }, []);
 
   return (
-    <div>
+    <div className="catalogoAdmon__container">
       <AdminNavBar />
 
       <div>

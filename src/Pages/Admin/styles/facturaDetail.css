@@ -1,0 +1,114 @@
+.facturaDetail-container{
+
+}
+
+ .facturaDetail-container {
+    margin: 20%;
+    width: 1100px;
+    height: 750px;
+    background: whitesmoke;
+    margin: auto;
+    margin-top: 7.6%;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #1d1d1d;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+.titleFacturaDetail{
+    margin-left: 40%;
+}
+
+.contariner-personalinfo{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.contariner-ubicacioncompra{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.contariner-productos{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 100%;
+    margin-top: 2%;
+}
+
+
+
+.facturadetail-id{
+    margin-top: 2%;
+}
+
+.facturadetail-date{
+    margin-top: -4.5% ;
+    margin-left: 60%;
+}
+
+.facturadetail-nombre{
+    margin-top: 4% ;
+    margin-left: 2%;
+}
+
+.facturadetail-apellido{
+    margin-top: 0% ;
+    margin-left: 2%;
+}
+
+.facturadetail-doc{
+    margin-top: 0% ;
+    margin-left: 2%;
+}
+
+.facturadetail-telef{
+    margin-top: 0% ;
+    margin-left: 2%;
+}
+
+.facturadetail-email{
+    margin-bottom: 2% ;
+    margin-left: 2%;
+}
+
+.facturadetail-depart{
+    margin-top: 2% ;
+    margin-left: 10%;
+}
+
+.facturadetail-ciudad{
+    margin-top: -2% ;
+    margin-left: 60%;
+}
+
+.facturadetail-dirrecion{
+    margin-top: 1% ;
+    margin-left: 10%;
+}
+
+.facturadetail-descripcion{
+    margin-top: -2% ;
+    margin-bottom: 2% ;
+    margin-left: 60%;
+}
+
+.facturadetail-products{
+    margin-top: 2% ;
+    margin-left: 2%;
+}
+
+
+.facturadetail-valor{
+    margin-top: 20% ;
+    margin-left: 78%;
+}
+
+
+
