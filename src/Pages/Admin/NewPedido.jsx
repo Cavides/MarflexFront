@@ -19,6 +19,7 @@ function NewPedido() {
 
   const newPedido = async() =>{
     const pedido = await getPedidoByCode(form.numfactura);
+
     if (pedido.numfactura) {
       Swal.fire({
         title: 'This code is already in use!',
@@ -26,9 +27,9 @@ function NewPedido() {
         icon: 'warning',
         confirmButtonText: 'Got it!',
       });
-    }else if(pedido.fechapedido >= pedido.fechaentrega){
+    }else if(form.fechapedido > form.fechaentrega){
       Swal.fire({
-        title: 'TLas fechas son invalidas',
+        title: 'Las fechas son invalidas',
         text: 'No se puede viajar al pasado :(.',
         icon: 'warning',
         confirmButtonText: 'Got it!',
@@ -42,7 +43,6 @@ function NewPedido() {
       confirmButtonText: 'Got it!',
     });
     navigate('/pedidos', { replace: true });
-
   }
 
   }

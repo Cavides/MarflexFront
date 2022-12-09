@@ -14,6 +14,8 @@ function Register() {
 
   const newUser = async () => {
     const user = await getUserByEmail(form.email);
+
+  
     
 
     if (user.email) {
