@@ -4,7 +4,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import { getAllFacturas } from "../../Services/Factura_services";
 import Card from "../../Components/CardFacturas/Card";
-
+import "./styles/factura.css";
 
 import AdminNavBar from '../../Components/AdminNavbar/AdminNavBar';
 
@@ -24,7 +24,7 @@ function Facturas() {
 
   return (
    
-    <div>
+    <div className='facturaadnom-container'>
       <AdminNavBar />
 
       <div>

@@ -20,95 +20,130 @@ function NewProdruct() {
   };
 
   return (
-    <div>
+    <div className="container-cataadmon">
       <AdminNavBar />
 
-      <div className="newproduct-container">
+      <div className='newAdmon'>
+
+      <div className="newadmon-titlepage">
+        <h1>Agregar Producto</h1>
+      </div>
 
       <form onSubmit={handlerSumbit}>
+      <div className='newprod_admon'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-panelcode" onChange={handlerChange}
           type="number"
           name="code"
           placeholder="Codigo"
-        />
+        /></div>
+
+        <div className='newprod_admon-titulo'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-paneltitle" onChange={handlerChange}
           type="text"
           name="tilte"
           placeholder="Nombre del Producto"
-        />
+        /></div>
+
+        <div  className='newprod_admon-tipo'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-paneltype" onChange={handlerChange}
           type="text"
           name="type"
           placeholder="Tipo"
-        />
+        /></div>
+
+        <div className='newprod_admon-categoria'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-panelcategory" onChange={handlerChange}
           type="text"
           name="category"
           placeholder="Categoria"
         />
+        </div>
+
+        <div className='newprod_admon-resumen'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-paneldesc" onChange={handlerChange}
           type="text"
           name="desc"
           placeholder="Resumen"
-        />
+        /></div>
+
+        <div className='newprod_admon-medidas'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
-          type="text"
-          name="descripcion"
-          placeholder="Descripción"
-        />
-        <input
-          className="newProduct_formulario" onChange={handlerChange}
-          type="number"
-          name="price"
-          placeholder="Valor del proudcto"
-        />
-        <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-panelmedidas" onChange={handlerChange}
           type="text"
           name="medidas"
           placeholder="Medidas"
         />
+        </div>
+
+        <div className='newprod_admon-material'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-panelmaterial" onChange={handlerChange}
           type="text"
           name="material"
           placeholder="Material"
-        />
+        /></div>
+
+        <div className='newprod_admon-descripcion'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-paneldescripcion" onChange={handlerChange}
+          type="text"
+          name="descripcion"
+          placeholder="Descripción"
+        /></div>
+
+        <div  className='newprod_admon-precio'>
+        <input
+          className="newprod__field-panelprecio" onChange={handlerChange}
+          type="number"
+          name="price"
+          placeholder="Valor del proudcto"
+        /></div>
+        
+        <div className='newprod_admon-garantia'>
+        <input
+          className="newprod__field-panelgarantia" onChange={handlerChange}
           type="text"
           name="garantia"
           placeholder="Tiempo de Garantia"
-        />
+        /></div>
+
+        <div className='newprod_admon-armado'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-panelarmado" onChange={handlerChange}
           type="text"
           name="armado"
           placeholder="¿Requiere armado?"
-        />
+        /></div>
+
+        <div className='newprod_admon-recomendaciones'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-panelrecomendaciones" onChange={handlerChange}
           type="text"
           name="recomendaciones"
           placeholder="Recomendaciones"
-        />
+        /></div>
+        <div className='newprod_admon-imagen'>
         <input
-          className="newProduct_formulario" onChange={handlerChange}
+          className="newprod__field-panelimg" onChange={handlerChange}
           type="text"
           name="imagen"
           placeholder="Link de la imagen del producto"
         />
+        </div>
 
-        <button className="botons_formulario" type="submit">
+        <button className="admoncatalogo__submit" type="submit">
           Agregar Producto
         </button>
       </form>
+
+      <button className="admoncatalogo__cancelar" type="submit">
+          Cancelar
+        </button>
       </div>
     </div>
   );

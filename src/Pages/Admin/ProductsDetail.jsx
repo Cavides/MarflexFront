@@ -43,7 +43,7 @@ function Detail() {
     };
 
   return (
-    <div>
+    <div className='container-cataadmon'>
     <AdminNavBar />
     <div className='detailAdmon'>
 
