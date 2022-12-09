@@ -47,5 +47,11 @@ const getProduct = async (_id) =>{
     return response.json();
   }
 
+  export async function getProductByCode(code) {
+    const response = await fetch(`${URL}/productos/code/${code}`, {});
+    return response.json();
+  }
+  
+
 
 export {createProduct, getAllProducts, getProduct, updateProduct, deleteProduct, };

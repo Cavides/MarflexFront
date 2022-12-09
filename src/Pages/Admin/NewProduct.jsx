@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import AdminNavBar from "../../Components/AdminNavbar/AdminNavBar";
-import {createProduct} from "../../Services/Products_services";
+import {createProduct, getProductByCode} from "../../Services/Products_services";
+import Swal from 'sweetalert2';
 
 import "./styles/newProducts.css"
 
 function NewProdruct() {
   const [form, setForm] = useState({});
+
+  const navigate = useNavigate();
 
   const handlerChange = (event) => {
     const key = event.target.name;
@@ -14,11 +17,38 @@ function NewProdruct() {
     setForm({ ...form, [key]: value });
   };
 
+
+  const newProduct = async () =>{
+
+    const product = await getProductByCode(form.code);
+    
+    if (product.code) {
+      Swal.fire({
+        title: 'This code is already in use!',
+        text: 'Please enter a different code.',
+        icon: 'warning',
+        confirmButtonText: 'Got it!',
+      });
+  }else{
+    const response = await createProduct(form);
+    Swal.fire({
+      title: 'Your product has been created!',
+      text: 'Congratulations!',
+      icon: 'success',
+      confirmButtonText: 'Got it!',
+    });
+    navigate('/admonCatalogo', { replace: true });
+
+  }
+}
+
   const handlerSumbit = (e) => {
     e.preventDefault();
-    createProduct(form);
+    newProduct();
     console.log("info enviada", form);
   };
+
+
 
   return (
     <div className="container-cataadmon">
