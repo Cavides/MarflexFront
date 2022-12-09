@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import {updateProduct,deleteProduct} from "../../Services/Products_services";
 
 
@@ -218,6 +218,7 @@ function Detail() {
     /></div>
     </label>
 
+    <Link to="/admonCatalogo"><button type="submit" className="admoncatalogo__regresar" >Regresar</button></Link>
     
     <button type="submit" className="admoncatalogo__submit" >Modificar</button>
         </form>

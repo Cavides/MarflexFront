@@ -3,6 +3,11 @@ margin-left: 1200px;
 margin-top: 60px;
 }
 
+.linkNewProduct{
+    color:beige;
+    width:100px;
+}
+
 .catalogoAdmon__pedidos{
     margin-left: 10%;
 }

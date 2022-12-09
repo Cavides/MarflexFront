@@ -27,7 +27,7 @@ function CatalogoAdmin() {
       <div>
         <h1 className="catalogoAdmin-title">Catalogo de Productos </h1>
       </div>
-      <Link className="navBar__navLink" to="/newproduct">
+      <Link className="linkNewProduct" to="/newproduct">
       <div className="catalogoAdmon__ButtonAgg">
         <svg
           xmlns="http://www.w3.org/2000/svg"
