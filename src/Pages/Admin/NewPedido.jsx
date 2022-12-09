@@ -46,6 +46,7 @@ function NewPedido() {
                 type="number"
                 name="numfactura"
                 placeholder="Numero de factura"
+                required
               /></div>
 
               <div className='newpedido_admon-titulo'>
@@ -55,6 +56,7 @@ function NewPedido() {
                 type="text"
                 name="nombreProducto"
                 placeholder="Nombre del producto"
+                required
               /></div>
 
               <div className='newpedido_admon-fechapedido'>
@@ -65,6 +67,7 @@ function NewPedido() {
                   type="date"
                   name="fechaPedido"
                   placeholder="Fecha pedido"
+                  required
                 />
               </div>
 
@@ -77,6 +80,7 @@ function NewPedido() {
                 type="text"
                 name="almacen"
                 placeholder="Almacen"
+                required
               /></div>
 
              
@@ -88,6 +92,7 @@ function NewPedido() {
                 type="text"
                 name="color"
                 placeholder="Color del producto"
+                required
               /></div>
 
 <div className='newpedido_admon-fechaentrega'>
@@ -99,6 +104,7 @@ function NewPedido() {
                   type="date"
                   name="fechaEntrega"
                   placeholder="Fecha de entrega"
+                  required
                 />
               </div>
 
@@ -109,6 +115,7 @@ function NewPedido() {
                 type="text"
                 name="medida"
                 placeholder="Medida del producto"
+                required
               /></div>
 
               <div className='newpedido_admon-especificacion'>
@@ -118,6 +125,7 @@ function NewPedido() {
                 type="text"
                 name="especificacion"
                 placeholder="Especificacion de producto"
+                required
               /></div>
 
               <div className='newpedido_admon-foto'>
@@ -127,6 +135,7 @@ function NewPedido() {
                 type="text"
                 name="foto"
                 placeholder="Foto del producto"
+                required
               /></div>
 
               
@@ -138,6 +147,7 @@ function NewPedido() {
                 type="text"
                 name="asesor"
                 placeholder="Asesor"
+                required
               /></div>
 
               <div className='newpedido_admon-proveedor'>
@@ -147,6 +157,7 @@ function NewPedido() {
                 type="text"
                 name="proveedor"
                 placeholder="Nombre Proveedor"
+                required
               /></div>
 
               <div className='newpedido_admon-valor'>
@@ -156,6 +167,7 @@ function NewPedido() {
                 type="text"
                 name="valorVenta"
                 placeholder="Valor de venta"
+                required
               /></div>
                 <Link to="/pedidos"><button type="submit" className="admoncatalogo__regresar" >Cancelar</button></Link>
               <button className="admoncatalogo__submit" type="submit">
