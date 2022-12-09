@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParams,Link } from 'react-router-dom';
+import { useParams,Link, useNavigate } from 'react-router-dom';
 import {updateProduct,deleteProduct} from "../../Services/Products_services";
+import Swal from 'sweetalert2';
 
 
 import "./styles/productDetail.css";
@@ -12,6 +13,8 @@ import AdminNavBar from '../../Components/AdminNavbar/AdminNavBar';
 function Detail() {
   const [product, setProduct] = useState({});
   const { _id } = useParams();
+
+  const navigate = useNavigate();
 
 
 
@@ -31,15 +34,54 @@ function Detail() {
     setForm({...form, [key]: value});
   };
 
+
+  const updaprodc = async () => {
+    Swal.fire({
+      title: '¿Estas seguro que deseas modificarlo?',
+      text: "You won't be able to revert this!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Modificar'
+  }).then((result) => {
+      if (result.value) {
+
+        updateProduct(form);
+
+          navigate('/admonCatalogo', { replace: true });
+      }
+  });
+  };
+
+  const eliminarprod = async () => {
+    Swal.fire({
+      title: '¿Estas seguro?',
+      text: "No puedes deshacer esta acción",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, Eliminalo'
+  }).then((result) => {
+      if (result.value) {
+
+          deleteProduct(form.id);
+
+          navigate('/admonCatalogo', { replace: true });
+      }
+  });
+  };
+
     const handlerSumbit =(e) => {
       e.preventDefault();
-      updateProduct(form);
+      updaprodc();
       console.log("info enviada",form);
     };
 
     const handlerDelete =(e) => {
       e.preventDefault();
-      deleteProduct();
+      eliminarprod();
     };
 
   return (
@@ -56,7 +98,7 @@ function Detail() {
     <input
         className='detailprod__field-panelcode'
         name = "code"
-        defaultValue={product.code} onChange={handlerChange}
+        value={product.code} onChange={handlerChange}
         required
     /></div>
     </label>

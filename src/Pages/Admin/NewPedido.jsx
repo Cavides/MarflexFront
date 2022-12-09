@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { Link} from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import AdminNavBar from "../../Components/AdminNavbar/AdminNavBar";
 import { createPedido, getPedidoByCode } from "../../Services/Pedidos_services";
+import Swal from "sweetalert2";
 
 import "./styles/newpedido.css";
 
 function NewPedido() {
   const [form, setForm] = useState({});
+
+  const navigate = useNavigate();
 
   const handlerChange = (event) => {
     const key = event.target.name;
@@ -14,15 +17,39 @@ function NewPedido() {
     setForm({ ...form, [key]: value });
   };
 
-  // const newPedido = async() =>{
-  //   const pedido = await getPedidoByCode(form.numfactura);
+  const newPedido = async() =>{
+    const pedido = await getPedidoByCode(form.numfactura);
+    if (pedido.numfactura) {
+      Swal.fire({
+        title: 'This code is already in use!',
+        text: 'Please enter a different code.',
+        icon: 'warning',
+        confirmButtonText: 'Got it!',
+      });
+    }else if(pedido.fechapedido >= pedido.fechaentrega){
+      Swal.fire({
+        title: 'TLas fechas son invalidas',
+        text: 'No se puede viajar al pasado :(.',
+        icon: 'warning',
+        confirmButtonText: 'Got it!',
+      });
+  }else{
+    const response = await createPedido(form);
+    Swal.fire({
+      title: 'Your pedido has been created!',
+      text: 'Congratulations!',
+      icon: 'success',
+      confirmButtonText: 'Got it!',
+    });
+    navigate('/pedidos', { replace: true });
 
-  // }
+  }
+
+  }
 
   const handlerSumbit = (e) => {
     e.preventDefault();
-    // newPedido();
-    createPedido(form);
+    newPedido();
     console.log("info enviada", form);
   };
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParams,Link} from 'react-router-dom';
+import { useParams,Link, useNavigate} from 'react-router-dom';
 import {updatePedido,deletePedido} from "../../Services/Pedidos_services";
-
+import Swal from "sweetalert2";
 
 import "./styles/pedidoDetail.css";
 
@@ -14,6 +14,8 @@ function PedidosDetail() {
   
   const [pedido, setPedido] = useState({});
   const { _id } = useParams();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,15 +33,55 @@ function PedidosDetail() {
     setForm({...form, [key]: value});
   };
 
+  const updaprodc = async () => {
+    Swal.fire({
+      title: '¿Estas seguro que deseas modificarlo?',
+      text: "You won't be able to revert this!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Modificar'
+  }).then((result) => {
+      if (result.value) {
+
+        updatePedido(form);
+
+          navigate('/pedidos', { replace: true });
+      }
+  });
+  };
+
+  const eliminarprod = async () => {
+    Swal.fire({
+      title: '¿Estas seguro?',
+      text: "No puedes deshacer esta acción",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, Eliminalo'
+  }).then((result) => {
+      if (result.value) {
+
+          deletePedido(form.id);
+
+          navigate('/pedidos', { replace: true });
+      }
+  });
+  };
+
     const handlerSumbit =(e) => {
       e.preventDefault();
-      updatePedido(form);
+      
+      updaprodc ();
       console.log("info enviada",form);
     };
 
     const handlerDelete =(e) => {
       e.preventDefault();
-      deletePedido();
+      
+      eliminarprod();
     };
 
 
@@ -57,7 +99,7 @@ function PedidosDetail() {
     <input
         className='detailpedido__field-panelcode'
         name = "numfactura"
-        defaultValue={pedido.numfactura} onChange={handlerChange}
+        value={pedido.numfactura} onChange={handlerChange}
         required
     /></div>
     </label>
