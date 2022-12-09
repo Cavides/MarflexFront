@@ -51,169 +51,178 @@ function Detail() {
 
     <label>
     <div className='detailprod_admon'>
-      Code:
-    </div>
+      <h3>Code:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailprod__field-panelcode'
         name = "code"
         defaultValue={product.code} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
 
     <label>
-    <div className='detailprod_admon'>
-      Titulo:
-    </div>
+    <div className='detailprod_admon-titulo'>
+      <h3>Titulo:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailprod__field-paneltitle'
         name = "title"
         defaultValue={product.title} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
 
     <label>
-    <div className='detailprod_admon'>
-      Tipo:
-    </div>
+    <div className='detailprod_admon-tipo'>
+      <h3>Tipo:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailprod__field-paneltype'
         name = "type"
         defaultValue={product.type} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-     Categoria:
-    </div>
+    <div className='detailprod_admon-categoria'>
+     <h3>Categoria:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailprod__field-panelcategory'
         name = "category"
         defaultValue={product.category} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-      Resumen:
-    </div>
+    <div className='detailprod_admon-resumen'>
+      <h3>Resumen:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailprod__field-paneldesc'
         name = "desc"
         defaultValue={product.desc} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-      Descripcion:
-    </div>
+    <div className='detailprod_admon-medidas'>
+      <h3>Medidas:</h3>
+    
     <input
-        className='Proudct-title'
-        name = "descripcion"
-        defaultValue={product.descripcion} onChange={handlerChange}
-        required
-    />
-    </label>
-
-    <label>
-    <div className='detailprod_admon'>
-      Precio:
-    </div>
-    <input
-        className='Proudct-title'
-        name = "price"
-        defaultValue={product.price} onChange={handlerChange}
-        required
-    />
-    </label>
-
-    <label>
-    <div className='detailprod_admon'>
-      Medidas:
-    </div>
-    <input
-        className='Proudct-title'
+        className='detailprod__field-panelmedidas'
         name = "medidas"
         defaultValue={product.medidas} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
-    
+
     <label>
-    <div className='detailprod_admon'>
-      Material:
-    </div>
+    <div className='detailprod_admon-material'>
+      <h3>Material:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailprod__field-panelmaterial'
         name = "material"
         defaultValue={product.material} onChange={handlerChange}
         required
     />
+    </div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-      Garantia:
-    </div>
+    <div className='detailprod_admon-descripcion'>
+      <h3>Descripcion:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailprod__field-paneldescripcion'
+        name = "descripcion"
+        defaultValue={product.descripcion} onChange={handlerChange}
+        required
+    /></div>
+    </label>
+
+    <label>
+    <div className='detailprod_admon-precio'>
+      <h3>Precio:</h3>
+    
+    <input
+        className='detailprod__field-panelprecio'
+        name = "price"
+        defaultValue={product.price} onChange={handlerChange}
+        required
+    /></div>
+    </label>
+
+    
+    
+    
+
+    <label>
+    <div className='detailprod_admon-garantia'>
+      <h3>Garantia:</h3>
+    
+    <input
+        className='detailprod__field-panelgarantia'
         name = "garantia"
         defaultValue={product.garantia} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
     <label>
-    <div className='detailprod_admon'>
-      Armado:
-    </div>
+    <div className='detailprod_admon-armado'>
+      <h3>Armado:</h3>
+    
     <input
-        className='Proudct-title'
+        className='detailprod__field-panelarmado'
         name = "armado"
         defaultValue={product.armado} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
 
-    <label>
-    <div className='detailprod_admon'>
-      Recomendaciones:
-    </div>
-    <input
-        className='Proudct-title'
-        name = "recomendaciones"
-        defaultValue={product.recomendaciones} onChange={handlerChange}
-        required
-    />
-    </label>
+   
 
     <label>
-    <div className='detailprod_admon'>
-      Imagen:
-    </div>
+    <div className='detailprod_admon-imagen'>
+      <h3>Imagen:</h3>
+    
     <div className='detailprod_img'>
       <img src={product.imagen} alt="imagen del producto"/>
     </div>
+    
     <input
-        className='Proudct-title'
+        className='detailprod__field-panelimg'
         name = "imagen"
         defaultValue={product.imagen} onChange={handlerChange}
         required
-    />
+    /></div>
     </label>
+
+    <label>
+    <div className='detailprod_admon-recomendaciones'>
+      <h3>Recomendaciones:</h3>
     
-    <button type="submit" className="admon__submit" >Modificar</button>
+    <input
+        className='detailprod__field-panelrecomendaciones'
+        name = "recomendaciones"
+        defaultValue={product.recomendaciones} onChange={handlerChange}
+        required
+    /></div>
+    </label>
+
+    
+    <button type="submit" className="admoncatalogo__submit" >Modificar</button>
         </form>
 
-        <button type="submit" className="admon__submit" onClick={handlerDelete}>Eliminar</button>
+        <button type="submit" className="admoncatalogo__eliminar" onClick={handlerDelete}>Eliminar</button>
 
         </div>
     </div>

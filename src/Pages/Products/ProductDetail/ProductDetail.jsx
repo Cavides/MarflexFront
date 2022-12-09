@@ -51,7 +51,7 @@ function Detail() {
           <h3 className='detail__category'>Categoria : {product.category}</h3>
           <p className='detail__description'>{product.descripcion}</p>
           <div className='detail__down'>
-            <h3 className='detail__price'>Precio : {`$${product.price}`}</h3>
+            <h3 className='detail__price'>Precio :{Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(product.price)}</h3>
           </div>
           <div className='detail__button'>
           <button type="button" className="card__buttondetail" onClick={() => handleComprar(product)}>Comprar</button>

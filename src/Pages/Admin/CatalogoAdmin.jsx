@@ -24,6 +24,9 @@ function CatalogoAdmin() {
   return (
     <div className="catalogoAdmon__container">
       <AdminNavBar />
+      <div>
+        <h1 className="catalogoAdmin-title">Catalogo de Productos </h1>
+      </div>
       <Link className="navBar__navLink" to="/newproduct">
       <div className="catalogoAdmon__ButtonAgg">
         <svg

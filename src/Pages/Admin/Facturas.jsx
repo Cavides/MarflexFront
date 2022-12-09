@@ -26,8 +26,12 @@ function Facturas() {
    
     <div>
       <AdminNavBar />
+
+      <div>
+        <h1 className="catalogoAdmin-title">Facturas de pagos </h1>
+      </div>
       
-    <div className="catalogoAdmon__pedidos">
+    <div className="catalogoAdmon__factura">
       {facturas.map((factura) => {
         return <Card factura={factura} key={factura._id} />;
       })}

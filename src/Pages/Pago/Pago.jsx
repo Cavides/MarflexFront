@@ -1,22 +1,58 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  clearCart,
-  getTotals,
-} from "../../slices/cartSlice";
+import { clearCart, getTotals } from "../../slices/cartSlice";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 import { createFactura } from "../../Services/Factura_services";
 
-import { Link , useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Header from "../../Components/Header/Header";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 
 import "./pago.css";
+
+const ubicacion = [
+  {
+    departamento: "Antioquia",
+    ciudades: [
+      "San Antonio De Pereira",
+      "Apartadó",
+      "Barbosa",
+      "Bello",
+      "Caldas",
+      "Carepa",
+      "Carmen De Viboral",
+      "Caucasia",
+      "Chigorodo",
+      "Copacabana",
+      "Currulao",
+      "El Reposo Zona Uraba",
+      "El Retiro, El Totumo",
+      "El Totumo Zona Uraba",
+      "El Tres Zona Uraba",
+      "Envigado, Girardota",
+      "Guarne, Itagüí",
+      "La Ceja, La Estrella",
+      "La Tablaza, La Unión, Marinilla",
+      "Medellín, Necoclí",
+      "Nueva Colonia Zona Uraba",
+      "Rionegro, Sabaneta",
+      "San Antonio De Prado",
+      "San Cristobal",
+      "Santa Elena",
+      "Santuario",
+      "Turbo",
+      "Yondó",
+    ],
+  },{
+    "departamento":"Bolivar",
+    "ciudades":["Arjona", "Bayunca", "Calamar", "Cartagena", "Clemencia", "La Boquilla", "Magangué", "Mamonal", "Manzanillo Del Mar", "Pasacaballos", "Pontezuela", "Punta Canoa", "Santa Catalina", "Santa Rosa De Lima", "Turbaco, Yati"]
+  }
+];
 
 const imgpago =
   "https://res.cloudinary.com/ds9rxxr5l/image/upload/v1661626273/imagenes/pago_sym54q.png";
@@ -31,7 +67,6 @@ function Pago() {
     dispatch(getTotals());
   }, [cart, dispatch]);
 
-
   const [factura, setFactura] = useState({});
 
   const handlerChange = (event) => {
@@ -40,16 +75,16 @@ function Pago() {
     setFactura({ ...factura, [key]: value });
   };
 
-  const newFactura = async () =>{
+  const newFactura = async () => {
     Swal.fire({
-      title: 'Pago Exitoso!',
-      text: 'El pago de tus productos fue procesado exitosamente.',
-      icon: 'success',
-      confirmButtonText: 'Got it!',
+      title: "Pago Exitoso!",
+      text: "El pago de tus productos fue procesado exitosamente.",
+      icon: "success",
+      confirmButtonText: "Got it!",
     });
     await createFactura(factura);
-    navigate('/', { replace: true });
-  }
+    navigate("/", { replace: true });
+  };
 
   const handlerSumbit = (e) => {
     e.preventDefault();
@@ -145,7 +180,7 @@ function Pago() {
                   <input
                     className="pago-form__field-panel"
                     onChange={handlerChange}
-                    type="text"
+                    type="option"
                     name="departamento"
                     placeholder="Departamento"
                     required
@@ -198,7 +233,7 @@ function Pago() {
               <div className="pago-form__subtitle">Información de pago</div>
 
               <div className="pago-form__image">
-                <img src={imgpago}  alt="Formas de pago "/>
+                <img src={imgpago} alt="Formas de pago " />
               </div>
 
               <div className="pago-form__field">
@@ -258,7 +293,9 @@ function Pago() {
               </Link>
 
               {/* buttton comprar */}
-              <button type="submit" className="pago-form__comprar">Comprar</button>
+              <button type="submit" className="pago-form__comprar">
+                Comprar
+              </button>
             </form>
           </div>
         </div>
@@ -268,23 +305,27 @@ function Pago() {
             <div className="cart-items">
               {cart.cartItems &&
                 cart.cartItems.map((cartItem) => (
-                  <div className="cart-item" name="products" value={cartItem.id}  key={cartItem.code} >
+                  <div
+                    className="cart-item"
+                    name="products"
+                    value={cartItem.id}
+                    key={cartItem.code}
+                  >
                     <div className="cart-product">
                       <img src={cartItem.imagen} alt={cartItem.title} />
                       <div>
                         <h3>{cartItem.title}</h3>
                       </div>
                     </div>
-                    <div className="cart-product-price">${cartItem.price}</div>
+                    <div className="cart-product-price">${cartItem.price} </div>
                     <div className="cart-product-quantity">
-                    
-                      <div className="counter">  x  {cartItem.cartQuantity}</div>
-                      
+                      <div className="counter"> x {cartItem.cartQuantity}</div>
                     </div>
-                    <div
-                      className="cart-product-total-price"
-                    >
-                      ${cartItem.price * cartItem.cartQuantity}
+                    <div className="cart-product-total-price">
+                      {Intl.NumberFormat("es-CO", {
+                        style: "currency",
+                        currency: "COP",
+                      }).format(cartItem.price * cartItem.cartQuantity)}
                     </div>
                   </div>
                 ))}
@@ -293,7 +334,12 @@ function Pago() {
               <div className="cart-checkout">
                 <div className="subtotal">
                   <span>Total</span>
-                  <span className="amount" name="total" >${cart.cartTotalAmount}</span>
+                  <span className="amount" name="total">
+                    {Intl.NumberFormat("es-CO", {
+                      style: "currency",
+                      currency: "COP",
+                    }).format(cart.cartTotalAmount)}
+                  </span>
                 </div>
               </div>
             </div>

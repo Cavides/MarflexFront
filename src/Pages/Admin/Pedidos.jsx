@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getAllPedidos } from "../../Services/Pedidos_services";
 import Card from "../../Components/CardPedidos/Card";
+import "./styles/admonCatalogo.css";
 
 function Pedidos() {
 
@@ -20,6 +21,10 @@ function Pedidos() {
   return (
     <div>
       <AdminNavBar />
+
+      <div>
+        <h1 className="catalogoAdmin-title">Pedidos Realizados </h1>
+      </div>
 
       <Link className="navBar__navLink" to="/newpedido">
       <div className="catalogoAdmon__ButtonAgg">

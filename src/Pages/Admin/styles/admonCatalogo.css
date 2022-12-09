@@ -3,9 +3,16 @@ margin-left: 1200px;
 margin-top: 60px;
 }
 
-
+.catalogoAdmon__pedidos{
+    margin-left: 10%;
+}
 
 
 .catalogoAdmon__products{
-    margin-left: 15%;
+    margin-left: 10%;
+}
+
+.catalogoAdmin-title{
+    margin-top: 5%;
+    margin-left: 40%;
 }

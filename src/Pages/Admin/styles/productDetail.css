@@ -1,13 +1,233 @@
-
-.detailAdmon{
+.detailAdmon {
   margin: 20%;
+  width: 1100px;
+  height: 750px;
+  background: #f3b03c;
+  margin: auto;
+  margin-top: 5%;
+  box-shadow: 7px 13px 37px #000;
+  padding: 20px 30px;
+  border-top: 4px solid #1d1d1d;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
 }
 
-  .detail__title{
-    text-align: center;
+.detail__title {
+  text-align: center;
+}
+
+.detailprod_img img {
+  height: 200px;
+  width: auto;
+}
+
+.detailprod__field-panelcode {
+  align-items: baseline;
+  width: 10%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-paneltitle {
+  align-items: baseline;
+  width: 50%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-paneltype {
+  align-items: baseline;
+  width: 40%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-panelcategory {
+  align-items: baseline;
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-paneldesc {
+  align-items: baseline;
+  width: 40%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-paneldescripcion {
+  align-items: baseline;
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-panelprecio {
+  align-items: baseline;
+  width: 40%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-panelmedidas {
+  align-items: baseline;
+  width: 70%;
+
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-panelmaterial{
+  align-items: baseline;
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-panelgarantia{
+  align-items: baseline;
+  width: 40%;
+
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-panelarmado{
+  align-items: baseline;
+  width: 40%;
+
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-panelrecomendaciones{
+  align-items: baseline;
+  width: 100%;
+
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod__field-panelimg{
+  align-items: baseline;
+  width: 200px;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detailprod_admon-titulo{
+  margin-top: -8%;
+  margin-left:15%
+}
+
+.detailprod_admon-tipo{
+  margin-top: -8%;
+  margin-left:60%
+}
+
+.detailprod_admon-categoria{
+  margin-top: -8%;
+  margin-left:80%
+}
+
+.detailprod_admon-medidas{
+  margin-top: -8%;
+  margin-left:42%
+}
+
+.detailprod_admon-material{
+  margin-top: -8%;
+  margin-left:85%
+}
+
+.detailprod_admon-garantia{
+  margin-top: 0%;
+  margin-left:0%
+}
+
+.detailprod_admon-armado{
+  margin-top: 0%;
+  margin-left:0%
+}
+
+.detailprod_admon-imagen{
+  margin-top: -24%;
+  margin-left:62%
+}
+
+.detailprod_admon-recomendaciones{
+  margin-top: 0%;
+  margin-left:0%
+}
+
+.admoncatalogo__submit{
+  width: 100%;
+  height: 40px;
+  background: #024ff5;
+  border: none;
+  color: white;
+  margin-bottom: 16px;
   }
 
-  .detailprod_img img{
-    height: 200px;
-     width: auto;
-  }
+  .admoncatalogo__eliminar{
+    width: 100%;
+    height: 40px;
+    background: #ac0a0a;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    }
