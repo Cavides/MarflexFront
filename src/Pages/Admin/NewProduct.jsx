@@ -37,6 +37,7 @@ function NewProdruct() {
           type="number"
           name="code"
           placeholder="Codigo"
+          required
         /></div>
 
         <div className='newprod_admon-titulo'>
@@ -45,6 +46,7 @@ function NewProdruct() {
           type="text"
           name="tilte"
           placeholder="Nombre del Producto"
+          required
         /></div>
 
         <div  className='newprod_admon-tipo'>
@@ -53,6 +55,7 @@ function NewProdruct() {
           type="text"
           name="type"
           placeholder="Tipo"
+          required
         /></div>
 
         <div className='newprod_admon-categoria'>
@@ -61,6 +64,7 @@ function NewProdruct() {
           type="text"
           name="category"
           placeholder="Categoria"
+          required
         />
         </div>
 
@@ -70,6 +74,7 @@ function NewProdruct() {
           type="text"
           name="desc"
           placeholder="Resumen"
+          required
         /></div>
 
         <div className='newprod_admon-medidas'>
@@ -78,6 +83,7 @@ function NewProdruct() {
           type="text"
           name="medidas"
           placeholder="Medidas"
+          required
         />
         </div>
 
@@ -87,6 +93,7 @@ function NewProdruct() {
           type="text"
           name="material"
           placeholder="Material"
+          required
         /></div>
 
         <div className='newprod_admon-descripcion'>
@@ -95,6 +102,7 @@ function NewProdruct() {
           type="text"
           name="descripcion"
           placeholder="Descripción"
+          required
         /></div>
 
         <div  className='newprod_admon-precio'>
@@ -103,6 +111,7 @@ function NewProdruct() {
           type="number"
           name="price"
           placeholder="Valor del proudcto"
+          required
         /></div>
         
         <div className='newprod_admon-garantia'>
@@ -111,6 +120,7 @@ function NewProdruct() {
           type="text"
           name="garantia"
           placeholder="Tiempo de Garantia"
+          required
         /></div>
 
         <div className='newprod_admon-armado'>
@@ -119,6 +129,7 @@ function NewProdruct() {
           type="text"
           name="armado"
           placeholder="¿Requiere armado?"
+          required
         /></div>
 
         <div className='newprod_admon-recomendaciones'>
@@ -127,6 +138,7 @@ function NewProdruct() {
           type="text"
           name="recomendaciones"
           placeholder="Recomendaciones"
+          required
         /></div>
         <div className='newprod_admon-imagen'>
         <input
@@ -134,6 +146,7 @@ function NewProdruct() {
           type="text"
           name="imagen"
           placeholder="Link de la imagen del producto"
+          required
         />
         </div>
 
