@@ -81,7 +81,7 @@ function PedidosDetail() {
     const handlerDelete =(e) => {
       e.preventDefault();
       eliminarprod();
-      console.log("info enviada",_id);
+      console.log("info enviada");
     };
 
     
