@@ -45,7 +45,7 @@ function PedidosDetail() {
   }).then((result) => {
       if (result.value) {
 
-        updatePedido(form);
+        updatePedido(_id,form);
 
           navigate('/pedidos', { replace: true });
       }
@@ -64,7 +64,7 @@ function PedidosDetail() {
   }).then((result) => {
       if (result.value) {
 
-          deletePedido(form.id);
+          deletePedido(_id);
 
           navigate('/pedidos', { replace: true });
       }
@@ -80,11 +80,11 @@ function PedidosDetail() {
 
     const handlerDelete =(e) => {
       e.preventDefault();
-      
       eliminarprod();
+      console.log("info enviada",_id);
     };
 
-
+    
     
   return (
     <div className='container-cataadmon'>
@@ -132,6 +132,7 @@ function PedidosDetail() {
     <label>
     <div className='detailpedido_admon-alamcen'>
     <h3>Almacen:</h3>
+    
     
     <input
         className='detailpedido__field-panelalmacen'

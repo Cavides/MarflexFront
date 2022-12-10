@@ -74,7 +74,7 @@ function NewProdruct() {
         <input
           className="newprod__field-paneltitle" onChange={handlerChange}
           type="text"
-          name="tilte"
+          name="title"
           placeholder="Nombre del Producto"
           required
         /></div>

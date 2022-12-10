@@ -22,7 +22,7 @@ const getPedido = async (id) =>{
     return await response.json();
   }
 
-  const updatePedido = async(id,pedidoUpdate) => {
+  const updatePedido = async(id , pedidoUpdate) => {
     // const token = localStorage.getItem('token');
     const response = await fetch(`${URL}/pedidos/${id}`, {
       method: 'PATCH',
