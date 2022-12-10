@@ -36,9 +36,9 @@ const getProduct = async (_id) =>{
     return response.json();
   }
 
-  const deleteProduct = async () => {
+  const deleteProduct = async (id) => {
     // const token = localStorage.getItem('token');
-    const response = await fetch(`${URL}/productos`, {
+    const response = await fetch(`${URL}/productos/${id}`, {
       method: 'DELETE',
       headers: {
         // authorization: `Bearer ${token}`,
