@@ -15,44 +15,7 @@ import Footer from "../../Components/Footer/Footer";
 
 import "./pago.css";
 
-const ubicacion = [
-  {
-    departamento: "Antioquia",
-    ciudades: [
-      "San Antonio De Pereira",
-      "Apartadó",
-      "Barbosa",
-      "Bello",
-      "Caldas",
-      "Carepa",
-      "Carmen De Viboral",
-      "Caucasia",
-      "Chigorodo",
-      "Copacabana",
-      "Currulao",
-      "El Reposo Zona Uraba",
-      "El Retiro, El Totumo",
-      "El Totumo Zona Uraba",
-      "El Tres Zona Uraba",
-      "Envigado, Girardota",
-      "Guarne, Itagüí",
-      "La Ceja, La Estrella",
-      "La Tablaza, La Unión, Marinilla",
-      "Medellín, Necoclí",
-      "Nueva Colonia Zona Uraba",
-      "Rionegro, Sabaneta",
-      "San Antonio De Prado",
-      "San Cristobal",
-      "Santa Elena",
-      "Santuario",
-      "Turbo",
-      "Yondó",
-    ],
-  },{
-    "departamento":"Bolivar",
-    "ciudades":["Arjona", "Bayunca", "Calamar", "Cartagena", "Clemencia", "La Boquilla", "Magangué", "Mamonal", "Manzanillo Del Mar", "Pasacaballos", "Pontezuela", "Punta Canoa", "Santa Catalina", "Santa Rosa De Lima", "Turbaco, Yati"]
-  }
-];
+
 
 const imgpago =
   "https://res.cloudinary.com/ds9rxxr5l/image/upload/v1661626273/imagenes/pago_sym54q.png";
@@ -69,13 +32,19 @@ function Pago() {
 
   const [factura, setFactura] = useState({});
 
+ 
+
   const handlerChange = (event) => {
     const key = event.target.name;
     const value = event.target.value;
-    setFactura({ ...factura, [key]: value });
+    setFactura({ ...factura, [key]: value, cart });
+     
   };
 
+ 
+
   const newFactura = async () => {
+
     Swal.fire({
       title: "Pago Exitoso!",
       text: "El pago de tus productos fue procesado exitosamente.",
@@ -90,7 +59,7 @@ function Pago() {
     e.preventDefault();
     newFactura();
     dispatch(clearCart());
-    console.log("info enviada", factura);
+    console.log("info enviada",factura) ;
   };
 
   return (
@@ -317,7 +286,7 @@ function Pago() {
                         <h3>{cartItem.title}</h3>
                       </div>
                     </div>
-                    <div className="cart-product-price">${cartItem.price} </div>
+                    <div className="cart-product-price" >${cartItem.price} </div>
                     <div className="cart-product-quantity">
                       <div className="counter"> x {cartItem.cartQuantity}</div>
                     </div>
@@ -339,6 +308,7 @@ function Pago() {
                       style: "currency",
                       currency: "COP",
                     }).format(cart.cartTotalAmount)}
+                
                   </span>
                 </div>
               </div>
