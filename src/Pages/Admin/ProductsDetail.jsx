@@ -47,7 +47,7 @@ function Detail() {
   }).then((result) => {
       if (result.value) {
 
-        updateProduct(form);
+        updateProduct(_id,form);
 
           navigate('/admonCatalogo', { replace: true });
       }
@@ -66,7 +66,7 @@ function Detail() {
   }).then((result) => {
       if (result.value) {
 
-          deleteProduct(form.id);
+          deleteProduct(_id);
 
           navigate('/admonCatalogo', { replace: true });
       }

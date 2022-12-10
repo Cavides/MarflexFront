@@ -23,9 +23,9 @@ const getProduct = async (_id) =>{
     return await response.json();
   }
 
-  const updateProduct = async(productUpdate) => {
+  const updateProduct = async(id,productUpdate) => {
     // const token = localStorage.getItem('token');
-    const response = await fetch(`${URL}/productos`, {
+    const response = await fetch(`${URL}/productos/${id}`, {
       method: 'PATCH',
       body: JSON.stringify(productUpdate),
       headers: {
