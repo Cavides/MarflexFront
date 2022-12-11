@@ -108,3 +108,13 @@
 
   }
 
+.profile__section1__photo{
+  border-radius: 50%;
+}
+
+
+.profile__section1__photo__img{
+  width: 50px;
+  border-radius: 40%;
+}
+

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink,Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import "./header.css";
@@ -10,7 +10,16 @@ const logo =
 
 
 function Header() {
+
+  const navigate = useNavigate();
   const { cartTotalQuantity } = useSelector((state) => state.cart);
+
+  const user = JSON.parse(localStorage.getItem('profile'));
+
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate('/', { replace: true });
+  };
 
   return (
     <div className="header">
@@ -32,7 +41,48 @@ function Header() {
       </div>
 
       {/* ingreso-registro-cuentas */}
-
+      {user ? (
+          <>
+          <div>
+          <ul>
+            <li>
+              <button
+                type='button'
+                className='navBar__navLink'
+                to={`/profile/${user.userName}`}
+              >
+                <picture className='profile__section1__photo'>
+                  <img
+                    className='profile__section1__photo__img'
+                    src={user.avatar}
+                    alt='avatar'
+                  />
+                </picture>
+              </button>
+            </li>
+                <li>
+                  <NavLink
+                    className='navBar__navLink'
+                    to={`/profile/${user.userName}`}
+                  >
+                    <i className='fa-regular fa-user' />
+                    {user.name}
+                  </NavLink>
+                </li>
+                <li>
+                  <button
+                    type='submit'
+                    className='navBar__logout'
+                    onClick={handleLogout}
+                  >
+                    <i className='fa-sharp fa-solid fa-power-off' />
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </>
+        ) : (
       <div className="header__cuenta">
         <ul className="header__cuenta-menu">
           <li className="cuenta__item">
@@ -54,7 +104,7 @@ function Header() {
 
        
       </div>
-
+        )}
       {/* carrito */}
 
       <Link className="navBar__navLink" to="/cart">
