@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {  useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
-import { setProfile } from '../../../Store/profileSlice';
+import { profileSlice, setProfile } from '../../../Store/profileSlice';
 import { login } from '../../../Services/Auth';
 
 import "./Login.css";
@@ -17,12 +17,14 @@ function Login() {
 
   const fetchData = async () => {
     const response = await login(form.email, form.password);
-    const { profil, jwtoken, message} = response;
+    const { profile, jwtoken, message} = response;
+
+    console.log(profile,jwtoken,message);
 
     if (response.email && response.password) {
-      dispatch(setProfile(profil));
+      dispatch(setProfile(profile));
       localStorage.setItem('token', jwtoken);
-      localStorage.setItem('profile', JSON.stringify(profil));
+      localStorage.setItem('profile', JSON.stringify(profile));
       Swal.fire({
         title: 'Bienvenido',
         text: `Disfrute de su estancia`,

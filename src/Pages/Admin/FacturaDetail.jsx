@@ -10,19 +10,21 @@ import AdminNavBar from "../../Components/AdminNavbar/AdminNavBar";
 
 function FacturaDetail() {
   const [factura, setFactura] = useState({});
+  const [cartFactura, setCartFactura] = useState({});
   const { _id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await getFactura(_id);
       setFactura(result);
+      setCartFactura(result.cart); //
     };
     fetchData();
   }, []);
 
 const carts = factura.cart;
 
-console.log(carts);
+console.log("Array Cart",cartFactura);
 
 
   return (
@@ -102,7 +104,7 @@ console.log(carts);
           {" "}
           <h3 className="facturacard__prodcuts">
             <a>Productos</a> 
-            {/* {factura.cart.cartItems.code} */}
+          {cartFactura.map}
           </h3>
         </div>
         <div className="facturadetail-valor">
