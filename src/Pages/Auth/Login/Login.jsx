@@ -21,7 +21,7 @@ function Login() {
 
     console.log(profile,jwtoken,message);
 
-    if (response.email && response.password) {
+    if (profile) {
       dispatch(setProfile(profile));
       localStorage.setItem('token', jwtoken);
       localStorage.setItem('profile', JSON.stringify(profile));
