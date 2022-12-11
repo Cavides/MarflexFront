@@ -20,6 +20,11 @@ function FacturaDetail() {
     fetchData();
   }, []);
 
+const carts = factura.cart;
+
+console.log(carts);
+
+
   return (
     <div>
       <AdminNavBar />
@@ -96,7 +101,8 @@ function FacturaDetail() {
         <div className="facturadetail-products">
           {" "}
           <h3 className="facturacard__prodcuts">
-            <a>Productos</a> {factura.productos}
+            <a>Productos</a> 
+            {/* {factura.cart.cartItems.code} */}
           </h3>
         </div>
         <div className="facturadetail-valor">
