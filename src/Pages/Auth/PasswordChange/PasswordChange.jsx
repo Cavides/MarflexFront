@@ -41,7 +41,7 @@ function PasswordChange() {
       if (profile) {
         navigate(`/profile-settings/${profile.name}`);
       } else {
-        navigate(`/logIn`);
+        navigate(`/login`);
       }
     }
   };

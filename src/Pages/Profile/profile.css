@@ -63,6 +63,8 @@
     padding: 8px;
     text-align: left;
   }
+}
+
   .input{
     background-color: #fafbfc;
     border: none;
@@ -84,7 +86,7 @@
     background-color: #f0f1f5;
     transition-duration: 0.8s;
   }
-}
+
 
 .profile__section2 img{
   width: 100%;
@@ -136,7 +138,7 @@
   border-radius: 3px;
   box-shadow: none;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #f7e821;
   cursor: pointer;
   display: inline-flex;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -151,7 +153,7 @@
   width: 70%;
 }
 .profile__section2__button:hover{
-  background-color: #0db60f;
+  background-color: #0bbe0e;
   transition-duration: 0.8s;
 }
 
@@ -265,8 +267,7 @@
       margin-bottom: 5px;
       text-align: left;
     }
-
-    input{
+    input {
       background-color: #fafbfc;
       border: none;
       border-radius: 3px;

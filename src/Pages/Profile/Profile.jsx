@@ -22,7 +22,7 @@ function Profile() {
       form.lastName = profile.lastName;
     }
     const userByUserName = await getUserByEmail(form.email);
-    if (userByUserName.userName && userByUserName.email !== profile.email) {
+    if (userByUserName.email !== profile.email) {
       Swal.fire({
         title: 'This user name is already in use!',
         text: 'Please enter a different Username.',
@@ -51,7 +51,7 @@ function Profile() {
         icon: 'success',
         confirmButtonText: 'Ok!',
       });
-      navigate(`/profile/${profileUpdate.userName}`);
+      navigate(`/profile/${profileUpdate.name}`);
     }
   };
 
