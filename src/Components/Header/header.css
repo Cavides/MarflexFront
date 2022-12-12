@@ -66,6 +66,15 @@
     position:absolute
 }
 
+.header__cuentaok{
+  width: 162px;
+  height: auto;
+  float: left;
+  margin-left: 81%;
+  margin-top: 5%;
+  position:absolute
+}
+
 .header__cuenta-menu{
     list-style-type: none;
     display: inline-flex;
@@ -109,13 +118,14 @@
   }
 
 .profile__section1__photo{
-  border-radius: 50%;
+  background-color: transparent;
+  padding-right: 7px;
 }
 
 
 .profile__section1__photo__img{
-  width: 50px;
-  border-radius:0%;
+  width: 30px;
+  border-radius:50%;
 }
 
 .navBar__logout{

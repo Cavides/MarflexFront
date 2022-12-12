@@ -43,16 +43,12 @@ function Header() {
       {/* ingreso-registro-cuentas */}
       {user ? (
           <>
-          <div className="header__cuenta">
+          <div className="header__cuentaok">
           <nav id="menu">
         {/* <!-- start menu --> */}
         <ul>
         <li>
-        <button
-                  type="button"
-                  className="navBar__navLink"
-                  to={`/profile/${user.userName}`}
-                >
+       
                   <picture className="profile__section1__photo">
                     <img
                       className="profile__section1__photo__img"
@@ -60,7 +56,7 @@ function Header() {
                       alt="avatar"
                     />
                   </picture>
-                </button>
+              
         </li>
           <li>
             {/* <a href="#">Enlace 2</a> */}
