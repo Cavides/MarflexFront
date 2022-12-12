@@ -9,7 +9,7 @@ import { login } from '../../../Services/Auth';
 import "./Login.css";
 
 const admonUser = "admon@marflex.com";
-const admonPassword = "ADMON1212";
+const admonPass = "ADMON1212";
 
 const logo = "https://res.cloudinary.com/ds9rxxr5l/image/upload/v1661626272/imagenes/icoMarflex_zibr1l.png";
 
@@ -24,7 +24,7 @@ function Login() {
 
     console.log(profile,jwtoken,message);
 
-    if(form.password == admonPassword && form.email == admonUser){
+    if(form.password == admonPass && form.email == admonUser){
       console.log("Si puedes hacer la burrada");
       Swal.fire({
         title: 'Bienvenido Admon',
