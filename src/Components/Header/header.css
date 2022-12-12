@@ -118,3 +118,77 @@
   border-radius:0%;
 }
 
+.navBar__logout{
+  background-color: #f3b03c;
+  border: none;
+  height: 5%;
+}
+
+#menu ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+ }
+ 
+ /* items del menu */
+ 
+ #menu ul li {
+  background-color:transparent;
+ }
+ 
+ /* enlaces del menu */
+ 
+ #menu ul a {
+  display:block;
+  color:#f3b03c;
+  text-decoration:none;
+  font-weight:500;
+  font-size:20px;
+  /* font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+ }
+ 
+ /* items del menu */
+ 
+ #menu ul li {
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+ }
+ 
+ /* efecto al pasar el ratón por los items del menu */
+ 
+
+/* menu desplegable */
+
+#menu ul ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#f3b03c;
+  padding:0;
+  border: 1px solid black;
+  border-radius: 4px;
+ }
+ 
+ /* items del menu desplegable */
+ 
+ #menu ul ul li {
+  float:none;
+  width:150px
+ }
+ 
+ /* enlaces de los items del menu desplegable */
+ 
+ #menu ul ul a {
+  line-height:120%;
+  padding:10px 15px;
+ }
+ 
+ /* items del menu desplegable al pasar el ratón */
+ 
+ #menu ul li:hover > ul {
+  display:block;
+ }
+

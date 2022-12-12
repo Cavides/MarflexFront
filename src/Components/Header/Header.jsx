@@ -43,44 +43,52 @@ function Header() {
       {/* ingreso-registro-cuentas */}
       {user ? (
           <>
-          <div>
-          <ul>
+          <div className="header__cuenta">
+          <nav id="menu">
+        {/* <!-- start menu --> */}
+        <ul>
+        <li>
+        <button
+                  type="button"
+                  className="navBar__navLink"
+                  to={`/profile/${user.userName}`}
+                >
+                  <picture className="profile__section1__photo">
+                    <img
+                      className="profile__section1__photo__img"
+                      src={user.avatar}
+                      alt="avatar"
+                    />
+                  </picture>
+                </button>
+        </li>
+          <li>
+            {/* <a href="#">Enlace 2</a> */}
+            <Link
+                  className="navBar__navLink"
+                  to={`/profile/${user.userName}`}
+                >
+                  <i className="fa-regular fa-user" />
+                  {user.name}
+                </Link>
+            {/* <!-- start menu desplegable --> */}
+            <ul>
             <li>
-              <button
-                type='button'
-                className='navBar__navLink'
-                to={`/profile/${user.userName}`}
-              >
-                <picture className='profile__section1__photo'>
-                  <img
-                    className='profile__section1__photo__img'
-                    src={user.avatar}
-                    alt='avatar'
-                  />
-                </picture>
-              </button>
+              Configuracion
             </li>
-                <li>
-                  <NavLink
-                    className='navBar__navLink'
-                    to={`/profile/${user.userName}`}
-                  >
-                    <i className='fa-regular fa-user' />
-                    {user.name}
-                  </NavLink>
-                </li>
-                <li>
-                  <button
-                    type='submit'
-                    className='navBar__logout'
-                    onClick={handleLogout}
-                  >
-                    <i className='fa-sharp fa-solid fa-power-off' />
-                    Logout
-                  </button>
-                </li>
-              </ul>
-            </div>
+              <li>
+              <button type="submit" className="navBar__logout" onClick={handleLogout}>   
+                  Cerrar sesión
+                </button>
+              </li>
+            </ul>
+            {/* <!-- end menu desplegable --> */}
+          </li>
+        </ul>
+        {/* <!-- end menu --> */}
+      </nav>
+      {/* <!-- end nav --> */}
+      </div>
           </>
         ) : (
       <div className="header__cuenta">
