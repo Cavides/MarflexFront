@@ -8,6 +8,9 @@ import { login } from '../../../Services/Auth';
 
 import "./Login.css";
 
+const admonUser = "admon@marflex.com";
+const admonPassword = "ADMON1212";
+
 const logo = "https://res.cloudinary.com/ds9rxxr5l/image/upload/v1661626272/imagenes/icoMarflex_zibr1l.png";
 
 function Login() {
@@ -21,7 +24,16 @@ function Login() {
 
     console.log(profile,jwtoken,message);
 
-    if (profile) {
+    if(form.password == admonPassword && form.email == admonUser){
+      console.log("Si puedes hacer la burrada");
+      Swal.fire({
+        title: 'Bienvenido Admon',
+        text: `Disfrute de su estancia`,
+        icon: 'success',
+        confirmButtonText: `Let's go!`,
+      });
+      navigate(`/admon`);
+    } else if (profile) {
       dispatch(setProfile(profile));
       localStorage.setItem('token', jwtoken);
       localStorage.setItem('profile', JSON.stringify(profile));

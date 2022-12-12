@@ -1,22 +1,48 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import "./estilos.css";
 
 const logo =
   "https://res.cloudinary.com/ds9rxxr5l/image/upload/v1661626272/imagenes/icoMarflex_zibr1l.png";
 
 function AdminNavBar() {
+
+  const navigate = useNavigate();
+
+  const cerrarsesion = () => {
+    Swal.fire({
+      title: '¿Estas seguro que deseas cerrar sesion?',
+      text: "¿Ya terminaste de hacer todo lo planeado?",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Cerrar Sesion'
+  }).then((result) => {
+      if (result.value) {
+          navigate('/', { replace: true });
+      }
+  });
+  };
+
+const handlelogout = (e) =>{
+  e.preventDefault();
+  cerrarsesion()
+}
+
+
   return (
-    <div className="body_Admin">
+    <div className="body_AdminW">
       <div className="header_Admin">
         <div className="container_Admin">
           <div className="btn-menu_Admin">
             <label htmlFor="btn-menu_Admin">☰</label>
           </div>
           <div className="logo_Admin">
-            <h1>
+            <h5>
               <img src={logo} alt="logo de la empresa Marflex"/>
-            </h1>
+            </h5>
           </div>
         </div>
       </div>
@@ -39,6 +65,14 @@ function AdminNavBar() {
               Facturas
             </NavLink>
           </nav>
+          <div className="button_cerrarSesion">
+          <button className="button_cerrarsesion_admon" onClick={handlelogout}>Cerrar Sesion</button>
+          </div>
+
+          <div className="button_ayuda">
+            <a>Ayuda</a>
+          </div>
+          
           <label htmlFor="btn-menu_Admin">✖️</label>
         </div>
       </div>

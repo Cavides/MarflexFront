@@ -28,7 +28,7 @@ function Facturas() {
       <AdminNavBar />
 
       <div>
-        <h1 className="catalogoAdmin-title">Facturas de pagos </h1>
+        <h5 className="catalogoAdmin-title">Facturas de pagos </h5>
       </div>
       
     <div className="catalogoAdmon__factura">
@@ -42,3 +42,4 @@ function Facturas() {
 }
 
 export default Facturas
+ 
