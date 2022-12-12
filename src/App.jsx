@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
  
 import Login from "./Pages/Auth/Login/Login";
 import Register from "./Pages/Auth/Register/Register";
-// import ChangePass from "./Pages/Auth/ChangePassword/ChanPass";
+import PasswordChange from "./Pages/Auth/PasswordChange/PasswordChange";
 import ForgtPassword from "./Pages/Auth/ForgtPassWord/ForgtPassword";
 import AuthCode from "./Pages/Auth/ForgtPassWord/AuthCode";
 import NewPassword from "./Pages/Auth/ForgtPassWord/NewPassword";
@@ -74,6 +74,8 @@ function App() {
       <Route path='/newpedido' element={<NewPedido/>} />
       <Route path='/profile/:name' element={<Profile />} />
       <Route path='/profile-settings/:name' element={<ProfileSettings />} />
+      <Route path='/reset-password/:resetToken' element={<PasswordChange />}
+        />
       </Routes>
     </BrowserRouter>
   );
