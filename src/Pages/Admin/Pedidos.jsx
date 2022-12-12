@@ -23,7 +23,7 @@ function Pedidos() {
       <AdminNavBar />
 
       <div>
-        <h1 className="catalogoAdmin-title">Pedidos Realizados </h1>
+        <h5 className="catalogoAdmin-title">Pedidos Realizados </h5>
       </div>
 
       <Link className="navBar__navLink" to="/newpedido">

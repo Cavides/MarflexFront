@@ -25,7 +25,7 @@ function CatalogoAdmin() {
     <div className="catalogoAdmon__container">
       <AdminNavBar />
       <div>
-        <h1 className="catalogoAdmin-title">Catalogo de Productos </h1>
+        <h5 className="catalogoAdmin-title">Catalogo de Productos </h5>
       </div>
       <Link className="linkNewProduct" to="/newproduct">
       <div className="catalogoAdmon__ButtonAgg">
