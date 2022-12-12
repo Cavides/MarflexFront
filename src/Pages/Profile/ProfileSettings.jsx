@@ -1,0 +1,114 @@
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
+import NavBar from '../../Components/Navbar/Navbar';
+import Header from '../../Components/Header/Header';
+import DeleteAccountModal from '../../Components/deleteAccountModal/deleteAccountModal';
+import ChangePasswordModal from '../../Components/modalChangePassword/modalChangePassword';
+
+import "./profileSettings.css"
+
+function ProfileSettings() {
+  const profile = JSON.parse(localStorage.getItem('profile'));
+
+  const [isModalOpened, setIsModalOpened] = useState(false);
+  const [isDeleteAccountModalOpened, setIsDeleteAccountModalOpened] =
+    useState(false);
+  const [isChangePasswordModalOpened, setIsChangePasswordModalOpened] =
+    useState(false);
+
+  const handleOpenChangePasswordModal = () => {
+    setIsChangePasswordModalOpened(true);
+  };
+
+  const handleOpenDeleteAccountModal = () => {
+    setIsDeleteAccountModalOpened(true);
+  };
+
+  const handleOpenModal = () => {
+    setIsModalOpened(true);
+  };
+
+  return (
+    <div>
+    <Header />
+    <NavBar />
+    <section className='profile__section1'>
+      <div className='profile__section1__photo'>
+        <img
+          className='profile__section1__photo__img'
+          src={profile.avatar}
+          alt=''
+        />
+      </div>
+      <div className='profile__section1__name'>
+        <h1 className='profile__section1__name__title'>
+          {profile.name} {profile.lastName}
+        </h1>
+      </div>
+    </section>
+    <section className='profile__section__buttons'>
+      <NavLink
+        to={`/profile/${profile.userName}`}
+        className='profile__section__buttons__profileInSettings'
+      >
+        Profile
+      </NavLink>
+      <NavLink
+        to={`/profile-settings/${profile.userName}`}
+        className='profile__section__buttons__settingsInSettings'
+      >
+        Settings
+      </NavLink>
+    </section>
+    <section className='profile__section2'>
+      <div className='profile__section2__img'>
+        <img
+          className='profile__section2__photo__img'
+          src='../img/profile.png'
+          alt=''
+        />
+      </div>
+      <div className='profile__section2__manageAcount'>
+        <h1>Manage your Account</h1>
+      </div>
+      <section className='profile__settings'>
+        <div className='profile__settings__detail'>
+          <button
+            type='button'
+            id="modal"
+            className='profile__section2__about__changePassword'
+            onClick={handleOpenChangePasswordModal}
+          >
+            <h4>Change Password</h4>
+          </button>
+          <button
+            type='button'
+            className='profile__section2__about__deleteAcount'
+            onClick={handleOpenDeleteAccountModal}
+          >
+            <h4>Delete Account</h4>
+          </button>
+        </div>
+        {/* <ModalChangePhoto
+          isModalOpened={isModalOpened}
+          setIsModalOpened={setIsModalOpened}
+        /> */}
+      </section>
+    </section>
+
+
+    <DeleteAccountModal
+      isDeleteAccountModalOpened={isDeleteAccountModalOpened}
+      setIsDeleteAccountModalOpened={setIsDeleteAccountModalOpened}
+    />
+
+    <ChangePasswordModal
+      isChangePasswordModalOpened={isChangePasswordModalOpened}
+      setIsChangePasswordModalOpened={setIsChangePasswordModalOpened}
+    />
+  </div>
+  );
+}
+
+export default ProfileSettings;

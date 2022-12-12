@@ -24,6 +24,8 @@ import PoliticaDevol from "./Pages/PoliticadeDevol/PoliticaDevol";
 import  PoliticaDatos from "./Pages/PoliticadeDatos/PoliticaDatos";
 import CoberturaEnvios from "./Pages/CoberturadeEnvios/CoberturaEnvios";
 import Activation from "./Pages/Auth/Activation/Activation";
+import Profile from "./Pages/Profile/Profile";
+import ProfileSettings from "./Pages/Profile/ProfileSettings";
 
 import Cart from "./Components/Cart/Cart";
 import Pago from './Pages/Pago/Pago';
@@ -70,7 +72,8 @@ function App() {
       <Route path='/facturas' element={<Facturas/>} />
       <Route path='/pedidos' element={<Pedidos/>} />
       <Route path='/newpedido' element={<NewPedido/>} />
-      
+      <Route path='/profile/:name' element={<Profile />} />
+      <Route path='/profile-settings/:name' element={<ProfileSettings />} />
       </Routes>
     </BrowserRouter>
   );

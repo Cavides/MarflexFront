@@ -62,7 +62,7 @@ function Header() {
             {/* <a href="#">Enlace 2</a> */}
             <Link
                   className="navBar__navLink"
-                  to={`/profile/${user.userName}`}
+                  to={`/profile/${user.name}`}
                 >
                   <i className="fa-regular fa-user" />
                   {user.name}
