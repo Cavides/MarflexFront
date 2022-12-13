@@ -104,13 +104,27 @@ console.log("Array Cart",cartFactura);
           {" "}
           <h3 className="facturacard__prodcuts">
             <a>Productos</a> 
-          {cartFactura.map}
+            <table>
+            <tr>
+            <td>#</td>
+            <td>Nombre Producto</td>
+            <td>Cantidad</td>
+            <td>Precio</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Sofa Broke</td>
+              <td>1</td>
+              <td>1.592.900</td>
+            </tr>
+              
+            </table>
           </h3>
         </div>
         <div className="facturadetail-valor">
           {" "}
           <h3 className="facturacard__valor">
-            <a>Total venta:</a> $2.500.000
+            <a>Total venta:</a> $1.592.900
           </h3>
         </div>
         </div>
